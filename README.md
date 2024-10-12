@@ -66,7 +66,7 @@ PIRATE gives you the tools to easily edit your homepage, update your profile, an
 - OpenGraph structured data
 - Twitter Cards meta
 - XML Sitemaps
-- Astro v4 🚀
+- Built with Astro v4 🚀
 - TailwindCSS Utility classes
 - [Astro Assets Integration](https://docs.astro.build/en/guides/assets/) for optimised images with optional custom "blur up" loading effect
 - Pagination and archives, including Tags. Offered with custom swipe/scroll orienation feature
