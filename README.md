@@ -57,7 +57,7 @@ PIRATE gives you the tools to easily edit your homepage, update your profile, an
 - User-installable and configurable PWA (Progressive Web Apps)
 - Add / Modify / Delete pages and posts - no limitations.
 - Edit website settings, seo settings, logos, etc all from within the CMS.
-- Edit website appearance with integrated css controls and custom css options
+- Completely change the appearance with integrated css controls and custom css options
 - SEO Optimized (Scores 100 on PageSpeed)
 - Accessible, semantic HTML markup
 - Resolution Independence - Works on all devices from phone to TV
