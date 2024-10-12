@@ -67,7 +67,7 @@ PIRATE gives you the tools to easily edit your homepage, update your profile, an
 - XML Sitemaps
 - Astro v4 🚀
 - TailwindCSS Utility classes
-- [Astro Assets Integration](https://docs.astro.build/en/guides/assets/) for optimised images with custom "blur up" loading effect
+- [Astro Assets Integration](https://docs.astro.build/en/guides/assets/) for optimised images with optional custom "blur up" loading effect
 - Pagination and archives, including Tags. Offered with custom swipe/scroll orienation feature
 - [Automatic RSS feed](https://docs.astro.build/en/guides/rss)
 - Auto-generated [sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
