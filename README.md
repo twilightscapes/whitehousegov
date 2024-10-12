@@ -58,23 +58,22 @@ PIRATE gives you the tools to easily edit your homepage, update your profile, an
 - Add / Modify / Delete pages and posts - no limitations.
 - Edit website settings, seo settings, logos, etc all from within the CMS.
 - SEO Optimized (Scores 100 on PageSpeed)
+- Accessible, semantic HTML markup
+- Resolution Independence - Works on all devices from phone to TV
+- Dark / Light mode, using Tailwind and CSS variables
 - Social media icons
 - OpenGraph structured data
 - Twitter Cards meta
 - XML Sitemaps
 - Astro v4 🚀
 - TailwindCSS Utility classes
-- Accessible, semantic HTML markup
-- Resolution Independence - Works on all devices from phone to TV
-- Dark / Light mode, using Tailwind and CSS variables
 - [Astro Assets Integration](https://docs.astro.build/en/guides/assets/) for optimised images with custom "blur up" loading effect
-- Pagination and archives, including Tags. Offered with custon swipe/scroll
+- Pagination and archives, including Tags. Offered with custom swipe/scroll orienation feature
 - [Automatic RSS feed](https://docs.astro.build/en/guides/rss)
 - Auto-generated [sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
 - [Pagefind](https://pagefind.app/) static search library integration
 - [Astro Icon](https://github.com/natemoo-re/astro-icon) svg icon component
 - [Keystatic CMS](https://keystatic.com) is integrated into and controls all aspects of your site.
-
 - PiRATE Social features coming soon
 
 
