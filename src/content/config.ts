@@ -95,7 +95,7 @@ const collections = {
     schema: z.object({
       section: z.string(),
       showTitle: z.boolean().optional(),
-      content: z.string(),
+      content: z.string().optional(),
     }),
   }),
 
