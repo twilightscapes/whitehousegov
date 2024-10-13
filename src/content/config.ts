@@ -56,8 +56,8 @@ const collections = {
   CTAs: defineCollection({
     type: 'data',
     schema: z.object({
-      title: z.string(),
-      ctaUrl: z.string(),
+      title: z.string().optional(),
+      ctaUrl: z.string().optional(),
       description: z.string().optional(),
       showFancy: z.boolean().optional(),
     }),
@@ -102,9 +102,9 @@ const collections = {
   testimonials: defineCollection({
     type: 'data',
     schema: z.object({
-      name: z.string(),
+      name: z.string().optional(),
       location: z.string().optional(),
-      quote: z.string(),
+      quote: z.string().optional(),
       image: z.string().optional(),
       order: z.number().optional(),
     }),
@@ -113,8 +113,8 @@ const collections = {
   menuItems: defineCollection({
     type: 'data',
     schema: z.object({
-      title: z.string(),
-      path: z.string(),
+      title: z.string().optional(),
+      path: z.string().optional(),
       order: z.number().optional(),
     }),
   }),
@@ -156,16 +156,16 @@ const collections = {
     schema: z.object({
       showRobots: z.boolean().optional(),
       siteUrl: z.string().optional(),
-      name: z.string(),
-      shortName: z.string(),
+      name: z.string().optional(),
+      shortName: z.string().optional(),
       screenshot: z.string().optional(),
-      description: z.string(),
-      themeColor: z.string(),
-      backgroundColor: z.string(),
-      startUrl: z.string(),
-      display: z.enum(['standalone', 'fullscreen', 'minimal-ui', 'browser']),
-      icon192: z.string(),
-      icon512: z.string(),
+      description: z.string().optional(),
+      themeColor: z.string().optional(),
+      backgroundColor: z.string().optional(),
+      startUrl: z.string().optional(),
+      display: z.enum(['standalone', 'fullscreen', 'minimal-ui', 'browser']).optional(),
+      icon192: z.string().optional(),
+      icon512: z.string().optional(),
     }),
   }),
 
