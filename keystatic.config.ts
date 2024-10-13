@@ -782,7 +782,7 @@ ui: {
     },
   },
   navigation: {
-    'Pages and Posts': [
+    'Site Pages and Posts': [
       'home',
       'pages',
       'posts',
