@@ -705,6 +705,7 @@ export default config({
           label: 'CTA',
           collection: 'CTAs',
         }),
+        showSocial: fields.checkbox({ label: 'Show Social Links' }),
       },
     }),    
 
