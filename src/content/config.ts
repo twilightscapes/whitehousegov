@@ -84,8 +84,8 @@ const collections = {
   faqs: defineCollection({
     type: 'content',
     schema: z.object({
-      question: z.string(),
-      answer: z.string(),
+      question: z.string().optional(),
+      answer: z.string().optional(),
       order: z.number().optional(),
     }),
   }),
