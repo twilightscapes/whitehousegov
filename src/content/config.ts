@@ -1,4 +1,5 @@
 import { defineCollection, z } from "astro:content";
+
 function removeDupsAndLowerCase(array: string[]) {
   if (!array.length) return array;
   const lowercaseItems = array.map((str) => str.toLowerCase());
@@ -219,16 +220,13 @@ const language = defineCollection({
   }),
 });
 
-
 const social = defineCollection({
   type: 'data',
   schema: z.object({
     profile: z.string().optional(),
-    description: z.string().optional(),
-    autoDeletePiratePosts: z.boolean().optional().default(false),
-    autoDeleteTime: z.number().optional().default(1440),
   }),
 });
+
 
 const post = defineCollection({
   type: 'content',
@@ -250,6 +248,18 @@ const pitches = defineCollection({
     subheading3: z.string().optional(),
     text2: z.string().optional(),
     text3: z.string().optional(),
+  }),
+});
+
+const piratePosts = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    content: z.string(),
+    createdAt: z
+      .string()
+      .or(z.date())
+      .transform((val) => new Date(val)),
   }),
 });
 
@@ -283,19 +293,6 @@ const resumeSettings = defineCollection({
   }),
 });
 
-const piratePosts = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    content: z.string(),
-    createdAt: z
-      .string()
-      .or(z.date())
-      .transform((val) => new Date(val)),
-  }),
-});
-
-
 export const collections = {
   post,
   faqs, 
@@ -308,9 +305,8 @@ export const collections = {
   CTAs: CTAs,
   resume,
   resumeSettings,
-  piratePosts,
-  social,
 };
+
 
 
 export type PitchData = {
