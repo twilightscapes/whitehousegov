@@ -41,7 +41,7 @@ export default config({
           }),
         }),
 
-        externalUrl: fields.text({ label: 'External Url', description: 'A url of an external site will be loaded into an iframe', defaultValue: 'http://', }),
+        externalUrl: fields.text({ label: 'External Url', description: 'A url of an external site will be loaded into an iframe', }),
 
 
         youtube: fields.conditional(
