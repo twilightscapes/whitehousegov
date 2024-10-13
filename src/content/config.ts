@@ -66,7 +66,7 @@ const collections = {
   pitches: defineCollection({
     type: 'data',
     schema: z.object({
-      title: z.string(),
+      title: z.string().optional(),
       showTitle: z.boolean().optional(),
       image: z.string().optional(),
       imageAlt: z.string().optional(),
