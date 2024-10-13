@@ -1,0 +1,4 @@
+profile: Pirate Tester
+description: I am a test profile user. This is only a test.
+autoDeletePiratePosts: true
+autoDeleteTime: 5

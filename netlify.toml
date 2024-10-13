@@ -2,6 +2,13 @@
   command = "./update-theme.sh && pnpm build"
   publish = "dist"
   functions = "netlify/functions"
-  
 [functions]
-  node_bundler = "esbuild"
+  directory = "netlify/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-schedule"
+
+[[plugins.inputs.schedules]]
+  name = "deleteOldPosts"
+  schedule = "@daily"
+  command = "netlify-lambda invoke deleteOldPosts"

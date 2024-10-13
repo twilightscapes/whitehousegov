@@ -193,7 +193,9 @@ export default config({
         order: fields.number({ label: 'Order' }),
       },
   
-    }),    menuItems: collection({
+    }),
+    
+    menuItems: collection({
       label: 'Menu Items',
       path: 'src/content/menu/*',
       slugField: 'path',
@@ -203,7 +205,32 @@ export default config({
         order: fields.number({ label: 'Order' }),
       },
     }),
+
+    piratePosts: collection({
+      label: 'Pirate Posts',
+      path: 'src/content/piratePosts/*',
+      format: { contentField: 'content' },
+      slugField: 'title',
+      schema: {
+        title: fields.slug({ name: { label: 'Title' } }),
+        content: fields.markdoc({ label: 'Content' }),
+        createdAt: fields.datetime({ label: 'Created At' }),
+      },
+    }),
+
+
+    
   },
+
+
+
+
+
+
+
+
+
+
   singletons: {
     siteSettings: singleton({
       label: 'Site Settings',
@@ -383,8 +410,8 @@ export default config({
         // }),
         divider7: fields.empty(),
         showBioOnHome: fields.checkbox({
-          label: 'Show Bio Module',
-          description: 'Hide/Show the Bio/Info section on the home page',
+          label: 'Show Profile Module',
+          description: 'Hide/Show the Profile section on the home page',
           defaultValue: false,
         }),
 
@@ -443,7 +470,7 @@ export default config({
         divider6: fields.empty(),
         
         featureOrder: fields.number({ label: 'Feature Section Order', defaultValue: 1 }),
-        bioOrder: fields.number({ label: 'Bio Section Order', defaultValue: 2 }),
+        bioOrder: fields.number({ label: 'Profile Section Order', defaultValue: 2 }),
         appOrder: fields.number({ label: 'App Section Order', defaultValue: 3 }),
         galleryOrder: fields.number({ label: 'Gallery Section Order', defaultValue: 4 }),
         postsOrder: fields.number({ label: 'Posts Section Order', defaultValue: 5 }),
@@ -489,7 +516,7 @@ export default config({
         divider: fields.empty(),
 
         showBioOnPhotos: fields.checkbox({
-          label: 'Show Bio Module',
+          label: 'Show Profile Module',
           defaultValue: false,
         }),
 
@@ -660,7 +687,7 @@ export default config({
   
 
     bio: singleton({
-      label: 'Bio',
+      label: 'Profile',
       path: 'src/content/bio/',
       schema: {
         title: fields.text({ label: 'Title' }),
@@ -683,13 +710,23 @@ export default config({
 
 
     pirateSocial: singleton({
-      label: 'Profile',
+      label: 'Settings',
       path: 'src/content/social/',
       schema: {
-        profile: fields.text({ label: 'Profile' }),
+        profile: fields.text({ label: 'Profile Name' }),
+        description: fields.text({ label: 'Profile Description' }),
+        autoDeletePiratePosts: fields.checkbox({
+          label: 'Auto-delete Pirate Posts',
+          description: 'Enable this to automatically delete Pirate Posts',
+          defaultValue: false,
+        }),
+        autoDeleteTime: fields.number({
+          label: 'Auto-delete Time (in minutes)',
+          description: 'Set the time after which Pirate Posts will be deleted',
+          defaultValue: 1440, // 24 hours in minutes
+        }),
       },
     }),
-
 
 
 
@@ -770,6 +807,7 @@ ui: {
     ],
     'Pirate Social': [
       'pirateSocial',
+      'piratePosts',
     ],
   },
 },});
