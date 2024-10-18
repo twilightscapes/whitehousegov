@@ -128,6 +128,15 @@ const collections = {
     }),
   }),
 
+  pirateFeeds: defineCollection({
+    type: 'content',
+    schema: z.object({
+      title: z.string().optional(),
+      feedUrl: z.string().optional(),
+      order: z.number().optional(),
+    }),
+  }),
+
   siteSettings: defineCollection({
     type: 'data',
     schema: z.object({
