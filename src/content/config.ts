@@ -120,7 +120,7 @@ const collections = {
   }),
 
   piratePosts: defineCollection({
-    type: 'content',
+    type: 'data',
     schema: z.object({
       title: z.string().optional(),
       content: z.string().optional(),
@@ -129,7 +129,7 @@ const collections = {
   }),
 
   pirateFeeds: defineCollection({
-    type: 'content',
+    type: 'data',
     schema: z.object({
       title: z.string().optional(),
       feedUrl: z.string().optional(),
