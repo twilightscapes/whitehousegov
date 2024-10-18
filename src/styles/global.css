@@ -266,7 +266,9 @@ body {
 
 #gobacker.button{margin:0;}
 
-body.home #gobacker{display: none;}
+#gobacker {position: absolute !important; top:1vh; bottom:2vh; right:2vw !important;}
+
+/* body.home #gobacker{display: none;} */
 	  /* #gobacker{position:fixed; display:flex;  right:10px; z-index:5; top:65px;} */
 	  
 	  .backimage{
