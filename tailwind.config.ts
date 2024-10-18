@@ -30,10 +30,10 @@ export default {
 					"&:hover": {
 						"@apply decoration-link decoration-2": {},
 					},
-					"@apply underline underline-offset-2": {},
+					"@apply underline-offset-2": {},
 				},
 				".title": {
-					"@apply text-2xl font-semibold text-accent-2": {},
+					"@apply text-2xl text-accent-2": {},
 				},
 			});
 		}),
