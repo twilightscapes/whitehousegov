@@ -301,7 +301,6 @@ export default config({
         divider: fields.empty(),
         showHeader: fields.checkbox({ label: 'Show Header', description: 'Hide/Show the main site header', defaultValue: true }),
         showLogo: fields.checkbox({ label: 'Show Logo', description: 'Hide/Show the logo in the header', defaultValue: true }),
-        showCheck: fields.checkbox({ label: 'Show Blue Check', description: 'Hide/Show the Blue Check - Blue Checks only available with use of a custom domain name', defaultValue: true }),
         showHome: fields.checkbox({ label: 'Show Home Link', description: 'Hide/Show the Home Link', defaultValue: true }),
         showTheme: fields.checkbox({ label: 'Show Theme', description: 'Hide/Show the theme selector', defaultValue: true }),
         showSwitch: fields.checkbox({ label: 'Show Switch', description: 'Hide/Show the layout selector', defaultValue: true }),
@@ -329,6 +328,7 @@ export default config({
           defaultValue: true 
         }),
         showSocial: fields.checkbox({ label: 'Show Social Links in Posts' }),
+        showCheck: fields.checkbox({ label: 'Show Pirate Link', description: 'Hide/Show the Pirate Link', defaultValue: true }),
         showTags: fields.checkbox({ label: 'Show Post Tags', description: 'Hide/Show the post tags', defaultValue: false }),
         MAX_POSTS: fields.number({ label: 'Number of posts to display on home page', defaultValue: 3 }),
         MAX_POSTS_PER_PAGE: fields.number({ label: 'Number of posts to display on other pages', defaultValue: 3 }),
