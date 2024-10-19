@@ -2,12 +2,12 @@
 import ThemeToggle from "../ThemeToggle.astro";
 import Search from "../Search.astro";
 import Switch from "@/components/Switch.jsx";
-// import BlueCheck from "@/components/BlueCheck.astro";
+import BlueCheck from "@/components/BlueCheck.astro";
 import { getEntry } from 'astro:content';
 import { getMenuLinks, siteConfig } from "@/site-config";
 import GoBack from "@/components/GoBack.astro";
 const siteSettings = await getEntry('siteSettings', 'main');
-const { showHeader, showLogo, showTheme, showSearch, showSwitch, showHome, logoImage, defaultView } = siteSettings.data;
+const { showHeader, showLogo, showTheme, showSearch, showSwitch, showHome, logoImage, defaultView, showCheck } = siteSettings.data;
 
 
 // const language = await getEntry('language', 'index');
@@ -62,9 +62,10 @@ const menuLinks = await getMenuLinks();
   </div>
 )}
 
-<div id="missioncontrol" class="missioncontrol1 sitecontrols flex justify-center items-center gap-10 pr-2.5" style="">
-  
 
+<div id="missioncontrol" class="missioncontrol1 sitecontrols flex justify-center items-center gap-8 pr-2.5" style="">
+  
+  {showCheck && <div style="position:absolute; left: 1vw; bottom:0; opacity:.2;"><BlueCheck /></div>}
   
 
   {showTheme && <ThemeToggle style="margin-left:1vw;" />}
@@ -87,7 +88,7 @@ const menuLinks = await getMenuLinks();
 
 <button
 aria-label="Back to Top"
-class="z-90 fixed end-4 flex h-8 w-8 translate-y-24 items-center justify-center rounded-full border-2 border-transparent bg-[#333] text-3xl opacity-0 transition-all duration-300 hover:border-zinc-400 data-[show=true]:translate-y-0 data-[show=true]:opacity-85 dark:bg-[#333] sm:end-2 sm:h-12 sm:w-12"
+class="z-90 fixed bottom-0 end-4 flex h-8 w-8 translate-y-24 items-center justify-center rounded-full border-2 border-transparent bg-[#333] text-3xl opacity-0 transition-all duration-300 hover:border-zinc-400 data-[show=true]:translate-y-0 data-[show=true]:opacity-85 dark:bg-[#333] sm:end-2 sm:h-12 sm:w-12"
 data-show="false"
 id="to-top-btn"
 ><svg
