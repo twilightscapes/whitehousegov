@@ -63,7 +63,7 @@ const menuLinks = await getMenuLinks();
 )}
 
 
-<div id="missioncontrol" class="missioncontrol1 sitecontrols flex justify-center items-center gap-6" style="">
+<div id="missioncontrol" class="missioncontrol1 sitecontrols flex justify-center items-center gap-4" style="padding-right:20px;">
   
   {showCheck && <div style="position:absolute; left: 1vw; bottom:0; opacity:.2;"><BlueCheck /></div>}
   
@@ -88,7 +88,7 @@ const menuLinks = await getMenuLinks();
 
 <button
 aria-label="Back to Top"
-class="z-90 fixed bottom-0 end-2 flex  translate-y-24 items-center justify-center   opacity-0 transition-all duration-300 hover:border-zinc-400 data-[show=true]:translate-y-0 data-[show=true]:opacity-85 sm:end-2 sm:h-10 sm:w-10"
+class="z-90 fixed bottom-0 end-2 flex  translate-y-24 items-center justify-center rounded-md ring-zinc-400 hover:ring-2 opacity-0 transition-all duration-300 hover:border-zinc-400 data-[show=true]:translate-y-0 data-[show=true]:opacity-85 sm:end-2 sm:h-10 sm:w-10"
 data-show="false"
 id="to-top-btn"
 style="flex-direction: column;"
