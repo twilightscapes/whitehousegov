@@ -112,6 +112,34 @@ export default config({
       slugField: 'description'
     }),
 
+
+
+
+    socialLinks: collection({
+      label: 'Social Links',
+      path: 'src/content/socialLinks/*',
+      schema: {
+        friendlyName: fields.text({ label: 'Friendly Name' }),
+        link: fields.text({ label: 'Link URL' }),
+        icon: fields.select({
+          label: 'Icon',
+          options: [
+            { label: 'Twitter', value: 'mdi:twitter' },
+            { label: 'GitHub', value: 'mdi:github' },
+            { label: 'Facebook', value: 'mdi:facebook' },
+            { label: 'YouTube', value: 'mdi:youtube' },
+          ],
+          defaultValue: 'mdi:twitter'
+        }),
+        isWebmention: fields.checkbox({ label: 'Is Webmention', defaultValue: true }),
+      },
+      slugField: 'friendlyName'
+    }),
+    
+    
+
+
+    
     pitches: collection({
       label: 'Content Blocks',
       path: 'src/content/pitches/*',
@@ -230,9 +258,13 @@ export default config({
     }),
 
 
+
+
+    
+
+
     
   },
-
 
 
 
@@ -822,6 +854,7 @@ ui: {
       'pirateSocial',
       'piratePosts',
       'pirateFeeds',
+      'socialLinks',
     ],
   },
 },});
