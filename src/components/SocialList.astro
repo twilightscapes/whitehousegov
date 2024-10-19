@@ -17,7 +17,7 @@ const socialLinks = await getCollection('socialLinks') as unknown as Array<{
 ---
 
 <div class="flex flex-wrap items-end gap-x-2" style="justify-content:center;">
-	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
+	<ul class="flex items-center gap-x-2" style="margin:0 auto 3vh auto;">
 		<li class="flex">{showCheck && <BlueCheck />}</li>
 		{socialLinks.map((link) => (
 			<li class="flex">
@@ -27,7 +27,7 @@ const socialLinks = await getCollection('socialLinks') as unknown as Array<{
 					rel={`noopener noreferrer ${link.data.isWebmention ? "me authn" : ""}`}
 					target="_blank"
 				>
-					<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name={link.data.icon} />
+					<Icon aria-hidden="true" class="h-10 w-10" focusable="false" name={link.data.icon} />
 					<span class="sr-only">{link.id}</span>
 				</a>
 			</li>
