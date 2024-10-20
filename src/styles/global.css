@@ -266,7 +266,7 @@ body {
 
 #gobacker.button{margin:0 auto; max-width: 200px; height:60px; padding:1rem !important;}
 
-#gobacker {position: absolute !important;  right:60px !important;}
+#gobacker {position: absolute !important; bottom:0;  right:60px !important;}
 
 /* body.home #gobacker{display: none;} */
 	  /* #gobacker{position:fixed; display:flex;  right:10px; z-index:5; top:65px;} */
