@@ -23,5 +23,6 @@
       font-src 'self' data: *.gstatic.com *.googleapis.com;
       connect-src 'self';
       frame-ancestors *;
-    """    Referrer-Policy = "strict-origin-when-cross-origin"
+    """
+    Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
