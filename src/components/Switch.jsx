@@ -29,32 +29,20 @@ const SwipeIcon = () => (
 );
 
 function Switch({ defaultView }) {
-  const STORAGE_KEY = "siteViewPreference";
+  const STORAGE_KEY = 'siteViewPreference';
   
-  const [isSliderVisible, setIsSliderVisible] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const storedValue = localStorage.getItem(STORAGE_KEY);
-      return storedValue !== null ? JSON.parse(storedValue) : defaultView === 'swipe';
-    }
-    return defaultView === 'swipe';
-  });
+  // Initialize isSliderVisible based on defaultView
+  const [isSliderVisible, setIsSliderVisible] = useState(defaultView === 'swipe');
 
   useEffect(() => {
-    const handleStorageChange = (event) => {
-      if (event.key === STORAGE_KEY && typeof window !== 'undefined') {
-        const storedValue = localStorage.getItem(STORAGE_KEY);
+    // Check localStorage after component mounts
+    if (typeof window !== 'undefined') {
+      const storedValue = localStorage.getItem(STORAGE_KEY);
+      if (storedValue !== null) {
         setIsSliderVisible(JSON.parse(storedValue));
       }
-    };
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener("storage", handleStorageChange);
-
-      return () => {
-        window.removeEventListener("storage", handleStorageChange);
-      };
     }
-  }, []);
+  }, [defaultView]);
 
   useEffect(() => {
     const initializeView = () => {
@@ -89,7 +77,7 @@ function Switch({ defaultView }) {
       const newValue = !prev;
       if (typeof window !== 'undefined') {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(newValue));
-        window.dispatchEvent(new StorageEvent("storage", { key: STORAGE_KEY }));
+        window.dispatchEvent(new StorageEvent('storage', { key: STORAGE_KEY }));
         // Dispatch a custom event
         window.dispatchEvent(new CustomEvent('viewModeChanged'));
       }
@@ -102,7 +90,7 @@ function Switch({ defaultView }) {
       <button
         aria-label="Toggle View"
         onClick={toggleSlider}
-        className="flex items-center justify-center rounded-md ring-zinc-400 transition-all hover:ring-2"
+        className="flex items-center h-9 w-9 p-4 justify-center rounded-md ring-zinc-400 transition-all hover:ring-2"
       >
         <div className="themer">
           {isSliderVisible ? <GridIcon /> : <SwipeIcon />}
