@@ -103,31 +103,35 @@ style="flex-direction: column;"
   <img class="backimage w-2.5 h-2.5" src={backgroundImage} alt="Default Background" width="10" height="10" />
 )}
 
+<script lang="ts">
+  function initializeBackToTopButton() {
+    const scrollBtn = document.getElementById("to-top-btn");
+    const targetHeader = document.getElementById("top");
 
+    if (!scrollBtn || !targetHeader) return;
 
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-      const scrollBtn = document.getElementById("to-top-btn") as HTMLButtonElement;
-
-      const targetHeader = document.getElementById("top") as HTMLDivElement;
-    function callback(entries: IntersectionObserverEntry[]) {
+    function callback(entries) {
       entries.forEach((entry) => {
         scrollBtn.dataset.show = (!entry.isIntersecting).toString();
       });
     }
-      scrollBtn.addEventListener("click", () => {
-        console.log("Attempting to scroll");
-        document.body.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-        document.documentElement.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
+
+    scrollBtn.addEventListener("click", () => {
+      document.body.scrollTo({ top: 0, behavior: 'smooth' });
+      document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     const observer = new IntersectionObserver(callback);
     observer.observe(targetHeader);
-  });
-  </script>
+  }
+
+  // Initialize on initial page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeBackToTopButton);
+  } else {
+    initializeBackToTopButton();
+  }
+
+  // Re-initialize after each page navigation
+  document.addEventListener('astro:after-swap', initializeBackToTopButton);
+</script>
