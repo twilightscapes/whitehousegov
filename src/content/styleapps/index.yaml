@@ -12,3 +12,4 @@ lightText: rgba(0, 0, 0, 1)
 darkText: rgba(243, 231, 231, 1)
 lightLink: rgba(0, 0, 0, 1)
 darkLink: rgba(242, 231, 243, 1)
+customCSS: a:hover{color:red;}

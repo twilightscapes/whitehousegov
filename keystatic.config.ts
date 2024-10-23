@@ -265,8 +265,7 @@ export default config({
       slugField: 'title',
       schema: {
         title: fields.text({ label: 'Title' }),
-        feedUrl: fields.text({ label: 'Feed Url', description: 'The address to the Pirate users feed that you want to follow' }),
-        order: fields.number({ label: 'Order' }),
+        feedUrl: fields.url({ label: 'Feed Url', description: 'The address to the Pirate users feed that you want to follow' }),
       },
     }),
 
