@@ -308,6 +308,7 @@ body {
 		display: grid;
 		list-style: none;
 		column-gap: 2vw;
+		row-gap: 2vw;
 		padding: 0 2% 10vh;
 		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 		transition: transform .2s;
@@ -506,11 +507,11 @@ body {
 
 	  body:has(.header) #directorySelect{top:5px !important;}
 
+	  body:has(.home) #footer{display: none;}
+
 	  #footer{padding-bottom: 80px;}
 
 	  body:has(.home) #gobacker{display: none !important;}
-
-	  body:has(.home) #footer{display:none;}
 
 	select {
 		--webkit-appearance: none;
