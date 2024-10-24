@@ -266,11 +266,20 @@ export default config({
       schema: {
         title: fields.text({ label: 'Title' }),
         feedUrl: fields.url({ label: 'Feed Url', description: 'The address to the Pirate users feed that you want to follow' }),
+        order: fields.number({ label: 'Order' }),
       },
     }),
 
 
-
+    rssFeeds: collection({
+      label: 'RSS Feeds',
+      path: 'src/content/rss-feeds/*/',
+      slugField: 'name',
+      schema: {
+        name: fields.text({ label: 'Feed Name' }),
+        rssFeedUrl: fields.url({ label: 'RSS Feed URL' }),
+      },
+    }),
 
     
 
@@ -834,8 +843,8 @@ ui: {
     name: ' ',
     mark: ({ colorScheme }: { colorScheme: string }) => {
       let path = colorScheme === 'dark'
-        ? '/images/logo/logoImage.svg'
-        : '/images/logo/logoImage.svg';
+        ? 'https://pirateweb.org/images/logo/logoImage.svg'
+        : 'https://pirateweb.org/images/logo/logoImage.svg';
       return React.createElement('img', { src: path, height: 40, alt: "Pirate Logo" });
     },
   },

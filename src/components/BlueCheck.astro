@@ -6,7 +6,7 @@ const isNetlifyApp = isProduction && hostname.endsWith('netlify.app');
 // console.log('Hostname:', hostname);
 // console.log('Is Netlify App:', isNetlifyApp);
 ---
-<a href="/pirate" title="Verified Pirate User - Become A Pirate!">
+
   {!isNetlifyApp && <svg id="piratebug" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1000 1000" height="38px" width="38px" xmlns="http://www.w3.org/2000/svg">
     <g transform="matrix(1.43765,0,0,1.43765,-29.1195,-242.471)">
         <g>
@@ -82,6 +82,6 @@ const isNetlifyApp = isProduction && hostname.endsWith('netlify.app');
         </g>
     </g>
   </svg>}
-</a>
+
 
 

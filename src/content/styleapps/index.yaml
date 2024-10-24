@@ -1,3 +1,4 @@
+backgroundImage: /images/logo/logoImage.svg
 siteFont: Orbitron
 borderRadius: 10px
 lightBg: rgba(192, 185, 185, 0.57)
@@ -12,4 +13,6 @@ lightText: rgba(0, 0, 0, 1)
 darkText: rgba(243, 231, 231, 1)
 lightLink: rgba(0, 0, 0, 1)
 darkLink: rgba(242, 231, 243, 1)
-customCSS: a:hover{color:red;}
+customCSS: >-
+  .backimage{ max-height:50vh; margin-top: 20vh; object-fit: contain
+  !important;  opacity:.4 ; }
