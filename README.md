@@ -5,21 +5,13 @@
  -->
   
 
-https://github.com/user-attachments/assets/1f2cb472-cffe-4c51-ae21-c61a37003172
+<!-- https://github.com/user-attachments/assets/1f2cb472-cffe-4c51-ae21-c61a37003172 -->
 
 
   <strong align="center" style="font-size:30px">You're the Captain now!</strong>
 </div>
 
-PIRATE is not your typical social network. It's a decentralized network of individualy owned personal websites acting together as a new social content distribution model.
 
-Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utelize their free services for hosting your own platorm. Your individual website becomes your hub for social interactions on both PIRATE and other social media. The content you produce, you fully own and control the rights to.
-
-More than just a collection of individual websites, PIRATE uses the magic of RSS feeds, you can enjoy a central timeline that aggregates posts from across the network. You get to see what others are sharing, discover new voices, and engage in meaningful conversations.
-
-Your PIRATE website is actually a Progressive Web App (PWA), which means you can access it seamlessly from any of your devices. Being a PWA also means there are no App Stores to worry about!
-
-PIRATE gives you the tools to easily edit your homepage, update your profile, and publish engaging posts. It's super easy to get started, without any complicated technical barriers.
 
 <!-- <p align="left">PIRATE is a new social network with NO central control or ownership. It's based on leading Open-Source platforms and runs on individually owned websites.</p> -->
 
@@ -78,11 +70,24 @@ PIRATE gives you the tools to easily edit your homepage, update your profile, an
 - PiRATE Social features coming soon
 
 
+## 🏴‍☠️ PIRATE Social
+
+PIRATE is not your typical social network. It's a decentralized network of individualy owned personal websites acting together as a new social content distribution model.
+
+Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utelize their free services for hosting your own platorm. Your individual website becomes your hub for social interactions on both PIRATE and other social media. The content you produce, you fully own and control the rights to.
+
+More than just a collection of individual websites, PIRATE uses the magic of RSS feeds, you can enjoy a central timeline that aggregates posts from across the network. You get to see what others are sharing, discover new voices, and engage in meaningful conversations.
+
+Your PIRATE website is actually a Progressive Web App (PWA), which means you can access it seamlessly from any of your devices. Being a PWA also means there are no App Stores to worry about!
+
+PIRATE gives you the tools to easily edit your homepage, update your profile, and publish engaging posts. It's super easy to get started, without any complicated technical barriers.
+
+
 <div align="center">
 
 <br />
 <h3>Technology Stack</h3>
-PIRATE is built on industry leading technologies, and is designed from the ground up, using the best, most secure and modern development technology stack available today: <h2 style="font-size:30px;"><strong><i>T R A N G K</i></strong></h2>
+PIRATE is built on industry leading technologies, and is designed from the ground up, using the best, most secure and modern development technology stack available today: <h3 style="font-size:30px;"><strong><i>T R A N G K</i></strong></h3>
 <a href=""><img alt="" role="presentation" aria-hidden="true" src="public/images/partners/typescript-logo.webp" width="16%" height="auto" /></a>
 <a href="https://react.dev"><img alt="React Logo" role="presentation" aria-hidden="true" src="public/images/partners/react-logo.webp" width="14%" height="auto" /></a>
 <a href="https://astro.build"><img alt="Astro Logo" role="presentation" aria-hidden="true" src="public/images/partners/Astro-logo.webp" width="15%" height="auto" /></a>
@@ -91,15 +96,14 @@ PIRATE is built on industry leading technologies, and is designed from the groun
 <a href="https://keystatic.com"><img alt="Keystatic Logo" role="presentation" aria-hidden="true" src="public/images/partners/keystatic-logo.webp" width="16%" height="auto" /></a>
 
 
-<br />
+<br /><br />
 </div>
 
 
 <div align="center">
-<br /><br />
 
-## Get Started Now
-### Quick start
+
+# Install PIRATE &nbsp; | &nbsp; Quick Start
 
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/piratesocial/pirate) 
 
