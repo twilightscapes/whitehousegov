@@ -265,9 +265,9 @@ body {
 		border-radius:var(--border-radius);
 	  } */
 
-#gobacker.button{margin:0 auto; max-width: 200px; height:60px; padding:1rem !important; }
+/* #gobacker.button{margin:0 auto; max-width: 200px; height:60px; padding:1rem; } */
 
-#gobacker {position: absolute !important; bottom:0;  right:60px !important; background:var(--theme-header) !important;}
+#gobacker {position: absolute !important; right:60px !important; background:var(--theme-header) !important;}
 
 button.topper{background:var(--theme-header) !important;}
 
