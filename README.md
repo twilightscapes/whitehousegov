@@ -1,4 +1,10 @@
 <div align="center">
+  <a href="https://pirateweb.org">
+    <img src="public/images/logo/logoImage.svg" alt="Logo" width="30%" height="auto">
+  </a>
+  </div>
+
+<div align="center">
 <!--   <a href="https://pirateweb.org">
     <img src="public/images/homepage/featureImage/src.webp" alt="Logo" width="100%" height="auto">
   </a>
@@ -27,11 +33,7 @@
 
 <p align="center"><strong>PIRATE can be used on Netlify, Vercel, or Github</strong></p>
 
-<div align="center">
-  <a href="https://pirateweb.org">
-    <img src="public/images/logo/logoImage.svg" alt="Logo" width="30%" height="auto">
-  </a>
-  </div>
+
 <div align="center">
 <br />
     <a href="https://pirateweb.org">View Demo</a>
@@ -42,6 +44,17 @@
   </p>
 </div>
 
+<br />
+<div align="center">
+
+
+# Install PIRATE &nbsp; | &nbsp; Quick Start
+
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/piratesocial/pirate) 
+
+<!-- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftwilightscapes%2Fpirate&project-name=astro-pirate-theme) -->
+
+</div>
 
 ## 🏴‍☠️ Web Features
 
@@ -100,17 +113,7 @@ PIRATE is built on industry leading technologies, and is designed from the groun
 </div>
 
 
-<div align="center">
 
-
-# Install PIRATE &nbsp; | &nbsp; Quick Start
-
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/piratesocial/pirate) 
-
-<!-- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftwilightscapes%2Fpirate&project-name=astro-pirate-theme) -->
-
-<br /><br />
-</div>
 
 
 
