@@ -8,11 +8,11 @@ showSearch: false
 showFooter: false
 defaultView: swipe
 showTitles: true
-showDates: true
+showDates: false
 enableImageBlur: true
-showSocial: true
+showSocial: false
 showCheck: true
 showTags: true
 MAX_POSTS: 6
 MAX_POSTS_PER_PAGE: 20
-showShare: true
+showShare: false
