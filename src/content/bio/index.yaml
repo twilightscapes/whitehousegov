@@ -1,18 +1,10 @@
-title: Hoist Your Flag!
-tagline: You're the Captain of your content!
+title: Welcome to your new site!
+tagline: Please watch the videos above
 description: >-
-  Pirate is your Personal Web App (PWA) and it works on any device - NO App
-  Store needed.
-
-
-  Watch ad-free video, edit your page, profile, and publish content with FULL
-  ownership and copyright.
-
-
-  Pirate is Open-Source and it operates forever, with no contracts, commitments
-  or costs of any kind.
+  These videos are designed to show you how to quickly configure Pirate and how
+  to get everything set up on your new web app. 
 image: /images/bio/image.webp
-subheading: BECOME A PIRATE!
-subcontent: The Fleet Launches Soon!
-cta: front link
+subheading: Thank you!
+subcontent: For becoming a pirate!
+cta: Keystatic-admin
 showSocial: true
