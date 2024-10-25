@@ -127,7 +127,7 @@ PIRATE is built on industry leading technologies, and is designed from the groun
 - In order to to do so online, you will need to create a free account @ [KeyStatic Cloud](https://keystatic.cloud)
 - Connect your Keystatic account to your Github repo
 <!-- - Copy/paste the Keystatic project settings into your Netlify Env Variables -->
-- Copy and Paste the Keystatic Cloud project settings you are given into this file:     [https://github.com/YourGitAccount/YourRepo/edit/main/keystatic.config.ts](https://github.com/twilightscapes/pirate/edit/main/keystatic.config.ts)
+- Copy and Paste the Keystatic Cloud project settings you are given into this file:     [https://github.com/YourGitAccount/YourRepo/edit/main/keystatic.config.ts](https://github.com/piratesocial/pirate/edit/main/keystatic.config.ts)
 Edit this file on line 7 - replace "pirate/pirate" with your project settings from Keystatic Cloud.
 - Redeploy your site on Netlify and then go to yoursite.netlify.app/admin to login to the CMS and configure the rest of your site.
 
