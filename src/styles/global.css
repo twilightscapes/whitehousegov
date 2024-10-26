@@ -127,7 +127,7 @@ body {
 		--radius: 5px;
 		position: relative;
 		margin: 1vh auto;
-		padding: 1.5vh 2vw;
+		/* padding: 1.5vh 2vw; */
 		border-radius: var(--radius);
 		background: var(--theme-accent2);
 		cursor: pointer;
