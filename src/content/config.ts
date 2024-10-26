@@ -46,14 +46,14 @@ const collections = {
 
 
 
-  pages: defineCollection({
-    type: 'content',
-    schema: z.object({
-      title: z.string().optional(),
-      description: z.string().optional(),
-      content: z.string().optional(),
-    }),
-  }),
+  // pages: defineCollection({
+  //   type: 'content',
+  //   schema: z.object({
+  //     title: z.string().optional(),
+  //     description: z.string().optional(),
+  //     content: z.string().optional(),
+  //   }),
+  // }),
 
   CTAs: defineCollection({
     type: 'data',

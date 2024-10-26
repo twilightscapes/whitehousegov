@@ -83,22 +83,23 @@ export default config({
           label: 'Tags',
           itemLabel: (props: any) => props.value,        }),
       },
-    }),    pages: collection({      label: 'Other Pages',
-      path: 'src/content/pages/*',
-      slugField: 'title',
-      format: { contentField: 'content' },
-      schema: {
-        title: fields.text({ label: 'Title' }),
-        description: fields.text({ label: 'Description' }),
-        content: fields.document({
-          label: 'Content',
-          formatting: true,
-          dividers: true,
-          links: true,
-          images: true,
-        }),
-      },
-    }),
+    }),    
+    // pages: collection({      label: 'Other Pages',
+    //   path: 'src/content/pages/*',
+    //   slugField: 'title',
+    //   format: { contentField: 'content' },
+    //   schema: {
+    //     title: fields.text({ label: 'Title' }),
+    //     description: fields.text({ label: 'Description' }),
+    //     content: fields.document({
+    //       label: 'Content',
+    //       formatting: true,
+    //       dividers: true,
+    //       links: true,
+    //       images: true,
+    //     }),
+    //   },
+    // }),
 
     CTAs: collection({
       label: 'Call-To-Actions',
@@ -852,7 +853,7 @@ ui: {
   navigation: {
     'Site Pages and Posts': [
       'home',
-      'pages',
+      // 'pages',
       'posts',
     ],
     'Content Modules': [
