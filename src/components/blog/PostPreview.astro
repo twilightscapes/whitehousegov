@@ -54,28 +54,16 @@ const useCustomPlayer = post.data.youtube?.value?.useCustomPlayer ?? true;
         </div>
     ) : post.data.youtube?.discriminant && post.data.youtube.value?.videoOnly && thumbnailUrl ? (
         <div class="video-container" data-video-id={videoId} data-use-custom-player={useCustomPlayer}>
-            <img
-                src={thumbnailUrl}
-                alt={post.data.youtube.value.title || "Video thumbnail"}
-                class="object-contain video-thumbnail"
-                loading="eager"
-                fetchpriority="high"
-                width={defaultImageWidth}
-                height={defaultImageHeight}
+            <YouTubeEmbed
+                url={post.data.youtube.value.url || ''}
+                title={post.data.youtube.value.title}
+                controls={post.data.youtube.value.controls}
+                mute={post.data.youtube.value.mute}
+                loop={post.data.youtube.value.loop}
+                start={post.data.youtube.value.start}
+                end={post.data.youtube.value.end}
+                useCustomPlayer={useCustomPlayer}
             />
-            <div class="play-button" aria-label="Play video">▶</div>
-            <div class="youtube-embed" style="display: none;">
-                <YouTubeEmbed
-                    url={post.data.youtube.value.url || ''}
-                    title={post.data.youtube.value.title}
-                    controls={post.data.youtube.value.controls}
-                    mute={post.data.youtube.value.mute}
-                    loop={post.data.youtube.value.loop}
-                    start={post.data.youtube.value.start}
-                    end={post.data.youtube.value.end}
-                    useCustomPlayer={useCustomPlayer}
-                />
-            </div>
         </div>
     ) : (
         <a href={`/posts/${post.slug}/`} class="pirate-link" rel="prefetch">
