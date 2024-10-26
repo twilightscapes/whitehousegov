@@ -608,7 +608,7 @@ button.topper{background:var(--theme-header) !important;}
 	  section.resume{display:block !important; overflow: visible !important;column-count: 2; column-gap: 20px;}
 	  
 	 
-	  section.resume h2, section.resume h3, section.resume h4{font-size: 10pt !important;}
+	  section.resume div, section.resume h3, section.resume h4{font-size: 10pt !important;}
 
 
 
