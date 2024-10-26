@@ -91,11 +91,6 @@ const useCustomPlayer = post.data.youtube?.value?.useCustomPlayer ?? true;
                     end={post.data.youtube.value.end}
                     useCustomPlayer={useCustomPlayer}
                 />
-                {showTitles && (
-                        <h2 class="title" style={{ color: "", fontSize: "clamp(1.3rem, 2.4vw, 1rem)" }}>
-                            {post.data.title}
-                        </h2>
-                    )}
             </div>
         </div>
     ) : (
