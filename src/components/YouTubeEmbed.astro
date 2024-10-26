@@ -38,7 +38,7 @@ const videoId = getYouTubeId(url);
 const playerVars: { [key: string]: number | string } = {
   autoplay: 1,
   controls: controls ? 1 : 0,
-  mute: mute ? 1 : 0,
+  mute: 1, // Force mute initially
   loop: loop ? 1 : 0,
   start: start,
   end: end > 0 ? end : '',
@@ -46,10 +46,19 @@ const playerVars: { [key: string]: number | string } = {
 };
 
 
-
+const thumbnailUrl = videoId ? `https://img.youtube.com/vi/${videoId}/0.jpg` : '';
 
 ---
-
+<div class="video-facade" data-loaded="false">
+  <div class="facade-wrapper">
+    <img 
+      src={thumbnailUrl} 
+      alt={title || 'Video thumbnail'} 
+      loading="lazy"
+    />
+    <button class="facade-play">►</button>
+  </div>
+  <div class="video-player-wrapper" style="display: none;">
 {useCustomPlayer ? (
   <div class="custom-youtube-player" style="display:flex; justify-content:center;">
   <div id="youtube-player" style="width:100%; max-width:1600px; aspect-ratio:16/9;"></div>
@@ -97,6 +106,20 @@ const playerVars: { [key: string]: number | string } = {
 
   ></iframe>
 )}
+</div>
+</div>
+<script>
+  document.querySelectorAll('.video-facade').forEach(facade => {
+    const playBtn = facade.querySelector('.facade-play');
+    playBtn?.addEventListener('click', () => {
+      facade.setAttribute('data-loaded', 'true');
+      const playerWrapper = facade.querySelector('.video-player-wrapper');
+      if (playerWrapper) {
+        playerWrapper.setAttribute('style', 'display: block');
+      }
+    });
+  });
+</script>
 
 <script define:vars={{ videoId, playerVars, start, end, loop }}>
   const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -534,6 +557,43 @@ input[type="range"]::-webkit-slider-thumb {
   }
 </style>
 
+
+<style>
+  .video-facade[data-loaded="false"] .video-player-wrapper {
+    display: none;
+  }
+  
+  .video-facade[data-loaded="true"] .facade-wrapper {
+    display: none;
+  }
+
+  .facade-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .facade-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .facade-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+  }
+</style>
 
 
 
