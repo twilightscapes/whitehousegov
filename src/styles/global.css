@@ -500,8 +500,8 @@ button.topper{background:var(--theme-header) !important;}
 
 
 	.panel {
-		backdrop-filter: blur(54px);
-		-webkit-backdrop-filter: blur(54px);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
 		text-shadow: 0 1px 1px var(--theme-header);
 	}
 
