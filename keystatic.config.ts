@@ -658,12 +658,12 @@ export default config({
           label: 'Light Background Color', 
           description: '(light) Page Background - can use any color value',
         }),
-        lightAccent: colorPicker({ 
-          label: 'Light Accent Color', 
-          description: '(light) Accent - can use any color value',
-        }),
+        // lightAccent: colorPicker({ 
+        //   label: 'Light Accent Color', 
+        //   description: '(light) Accent - can use any color value',
+        // }),
         lightAccent2: colorPicker({ 
-          label: 'Light Accent2 Color', 
+          label: 'Light Button Color', 
           description: '(light) Accent2 - can use any color value',
         }),
         divider6: fields.empty(),
@@ -671,12 +671,12 @@ export default config({
           label: 'Dark Background Color', 
           description: '(dark) Page Background - can use any color value',
         }),
-        darkAccent: colorPicker({ 
-          label: 'Dark Accent Color', 
-          description: '(dark) Accent Color - can use any color value',
-        }),
+        // darkAccent: colorPicker({ 
+        //   label: 'Dark Accent Color', 
+        //   description: '(dark) Accent Color - can use any color value',
+        // }),
         darkAccent2: colorPicker({ 
-          label: 'Dark Accent2 Color', 
+          label: 'Dark Button Color', 
           description: '(dark) Accent Color2 - can use any color value',
         }),
         divider7: fields.empty(),
@@ -697,15 +697,16 @@ export default config({
           label: 'Dark Text Color', 
           description: '(dark) Text Color - can use any color value',
         }),
-        divider9: fields.empty(),
-        lightLink: colorPicker({ 
-          label: 'Light Link Color', 
-          description: '(light) Link Color - can use any color value',
-        }),
-        darkLink: colorPicker({ 
-          label: 'Dark Link Color', 
-          description: '(dark) Link Color - can use any color value',
-        }),
+        divider9: fields.empty(),  
+        // divider9: fields.empty(),
+        // lightLink: colorPicker({ 
+        //   label: 'Light Link Color', 
+        //   description: '(light) Link Color - can use any color value',
+        // }),
+        // darkLink: colorPicker({ 
+        //   label: 'Dark Link Color', 
+        //   description: '(dark) Link Color - can use any color value',
+        // }),
 
         customCSS: fields.text({ label: 'Custom CSS', description:'Additional CSS can be written here, overwriting the sites default styles.', multiline: true }),
 
