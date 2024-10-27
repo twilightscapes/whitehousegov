@@ -46,14 +46,14 @@ const collections = {
 
 
 
-  // pages: defineCollection({
-  //   type: 'content',
-  //   schema: z.object({
-  //     title: z.string().optional(),
-  //     description: z.string().optional(),
-  //     content: z.string().optional(),
-  //   }),
-  // }),
+  pages: defineCollection({
+    type: 'content',
+    schema: z.object({
+      title: z.string().optional(),
+      description: z.string().optional(),
+      content: z.string().optional(),
+    }),
+  }),
 
   CTAs: defineCollection({
     type: 'data',
@@ -254,6 +254,7 @@ const collections = {
       pitch: z.string().optional(),
       defaultDirectory: z.string().optional(),
       showGallerySelector: z.boolean().optional(),
+      showSwitch: z.boolean().optional(),
       galleryImages: z.array(z.object({
         image: z.string().optional(),
         caption: z.string().optional(),
@@ -268,17 +269,17 @@ const collections = {
       siteFont: z.string().optional(),
       borderRadius: z.string().optional(),
       lightBg: z.string().optional(),
-      // lightAccent: z.string().optional(),
+      lightAccent: z.string().optional(),
       lightAccent2: z.string().optional(),
       darkBg: z.string().optional(),
-      // darkAccent: z.string().optional(),
+      darkAccent: z.string().optional(),
       darkAccent2: z.string().optional(),
       lightHeader: z.string().optional(),
       darkHeader: z.string().optional(),
       lightText: z.string().optional(),
       darkText: z.string().optional(),
-      // lightLink: z.string().optional(),
-      // darkLink: z.string().optional(),
+      lightLink: z.string().optional(),
+      darkLink: z.string().optional(),
       customCSS: z.string().optional(),
     }),
   }),

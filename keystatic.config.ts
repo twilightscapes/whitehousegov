@@ -4,7 +4,7 @@ import { colorPicker } from './src/components/ColorPicker.tsx';
 export default config({
   storage: import.meta.env.PROD ? { kind: 'cloud' } : { kind: 'local' },
   cloud: import.meta.env.PROD
-    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'pirate/pirate' }
+    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'twilightscapes/twilight-astro' }
     : undefined,
   collections: {
     posts: collection({
@@ -614,6 +614,12 @@ export default config({
         showGallerySelector: fields.checkbox({
           label: 'Show Gallery Drop Down Menu',
           description: '(Directory-based mode only) Hiding this or leaving the default directory empty, will automatically show all the images in all directories',
+          defaultValue: false,
+        }),
+
+        showSwitch: fields.checkbox({
+          label: 'Show Swipe/Scroll Icon',
+          description: 'This will show the Swipe/Scroll icon making it possible to change the view from the set default',
           defaultValue: true,
         }),
 
