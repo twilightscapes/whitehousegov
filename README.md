@@ -55,6 +55,7 @@
 <!-- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftwilightscapes%2Fpirate&project-name=astro-pirate-theme) -->
 
 Setup takes about 4 minutes and <strong><i>requires a valid email address</i></strong>. This email address will be used to create an account on GitHub if you do not already have one. The GitHub account will be used to create an account on the hosting provider's site (Netlify) as well, and lastly it will be used for authentication in your web app itself. 
+- (Don't worry) All of this is done for you.
 
 </div>
 
