@@ -105,12 +105,12 @@ PIRATE gives you the tools to easily edit your homepage, update your profile, an
 <br />
 <h3>Technology Stack</h3>
 PIRATE is built on industry leading technologies, and is designed from the ground up, using the best, most secure and modern development technology stack available today: <h3 style="font-size:30px;"><strong><i>T R A K</i></strong></h3>
-<a href=""><img alt="" role="presentation" aria-hidden="true" src="public/images/partners/typescript-logo.webp" width="16%" height="auto" /></a>
-<a href="https://react.dev"><img alt="React Logo" role="presentation" aria-hidden="true" src="public/images/partners/react-logo.webp" width="14%" height="auto" /></a>
-<a href="https://astro.build"><img alt="Astro Logo" role="presentation" aria-hidden="true" src="public/images/partners/Astro-logo.webp" width="15%" height="auto" /></a>
+<a href=""><img alt="" role="presentation" aria-hidden="true" src="public/images/partners/typescript-logo.webp" width="24%" height="auto" /></a>
+<a href="https://react.dev"><img alt="React Logo" role="presentation" aria-hidden="true" src="public/images/partners/react-logo.webp" width="24%" height="auto" /></a>
+<a href="https://astro.build"><img alt="Astro Logo" role="presentation" aria-hidden="true" src="public/images/partners/Astro-logo.webp" width="24%" height="auto" /></a>
 <!-- <a href="https://netlify.com"><img alt="Netlify Logo" role="presentation" aria-hidden="true" src="public/images/partners/netlify-logo.webp" width="14%" height="auto" /></a>
 <a href="https://github.com"><img alt="GitHub Logo" role="presentation" aria-hidden="true" src="public/images/partners/github-logo.webp" width="15%" height="auto" /></a> -->
-<a href="https://keystatic.com"><img alt="Keystatic Logo" role="presentation" aria-hidden="true" src="public/images/partners/keystatic-logo.webp" width="16%" height="auto" /></a>
+<a href="https://keystatic.com"><img alt="Keystatic Logo" role="presentation" aria-hidden="true" src="public/images/partners/keystatic-logo.webp" width="24%" height="auto" /></a>
 
 
 <br /><br />
