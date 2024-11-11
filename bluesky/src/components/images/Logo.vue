@@ -43,7 +43,7 @@ import SVGIcon from "@/components/images/SVGIcon.vue"
 
       &:deep(svg) {
         fill: rgb(var(--fg-color));
-        height: 100%;
+        height: 1rem;
       }
     }
   }
