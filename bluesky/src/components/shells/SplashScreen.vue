@@ -43,7 +43,7 @@ const mainState = inject("state") as MainState
     animation: show 500ms ease-in-out;
     animation-fill-mode: forwards;
     fill: rgb(var(--accent-color));
-    font-size: 10rem;
+    font-size: 30vw;
     transition: fill 500ms ease-out;
   }
 }

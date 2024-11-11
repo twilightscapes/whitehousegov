@@ -26,7 +26,7 @@ import SVGIcon from "@/components/images/SVGIcon.vue"
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    grid-gap: 0.25em;
+    grid-gap: 0;
 
     & > .svg-icon {
       fill: rgb(var(--accent-color));
@@ -43,7 +43,7 @@ import SVGIcon from "@/components/images/SVGIcon.vue"
 
       &:deep(svg) {
         fill: rgb(var(--fg-color));
-        height: 1rem;
+        height: 3rem;
       }
     }
   }

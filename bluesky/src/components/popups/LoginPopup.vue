@@ -192,7 +192,7 @@ function submitCallback () {
     <div class="login-popup__inner">
       <div class="login-popup__header">
         <Logo />
-        <div class="description">The web client for Bluesky.</div>
+        <div class="description">Argh, Matey!</div>
       </div>
       <div class="login-popup__body">
         <EasyForm
@@ -315,7 +315,7 @@ $width: 768px;
 }
 
 .logo {
-  font-size: max(3.5rem, 6vmax);
+  font-size: 10vw;
 
   &:deep() {
     .version {
