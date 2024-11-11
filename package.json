@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "./update-theme.sh && cd bluesky && npm install && npm run build && cd .. && astro build && cp -r bluesky/dist dist/bluesky",
+		"build": "./update-theme.sh && cd pirate && npm install && npm run build && cd .. && astro build && cp -r pirate/dist dist/pirate",
 		"postbuild": "pagefind --site dist",		"preview": "astro preview",
 		"format": "prettier -w --cache . && prettier -w --cache **/*.astro",
 		"check": "astro check",

@@ -83,7 +83,7 @@ Setup takes about 4 minutes and <strong><i>requires a valid email address</i></s
 
 PIRATE is not your typical social network. It's a decentralized network of individualy owned personal websites acting together as a new social content distribution model.
 
-Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utilize their free services for hosting your own platorm. Your individual website becomes your hub for social interactions on BlueSky. Just go to yourwebsite.com/bluesky and login. Now you can control your website, and your social media in the same app on your phone! All for FREE!
+Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utilize their free services for hosting your own platorm. Your individual website becomes your hub for social interactions on BlueSky. Just go to yourwebsite.com/pirate and login. Now you can control your website, and your social media in the same app on your phone! All for FREE!
 
 Your PIRATE website is actually a Progressive Web App (PWA), which means you can access it seamlessly from any of your devices. Being a PWA also means there are no App Stores to worry about!
 
