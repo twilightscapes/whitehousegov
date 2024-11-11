@@ -1,0 +1,52 @@
+[
+  {
+    "name": "officialApp",
+    "generator": "https://bsky.app/profile/{uri}",
+    "list": "https://bsky.app/profile/{handle}/lists/{rkey}",
+    "starterPack": "https://bsky.app/starter-pack/{did}/{rkey}"
+  },
+  {
+    "name": "officialAppPost",
+    "post": "https://bsky.app/profile/{handle}/post/{rkey}"
+  },
+  {
+    "name": "officialAppProfile",
+    "post": "https://bsky.app/profile/{handle}",
+    "profile": "https://bsky.app/profile/{handle}"
+  },
+  {
+    "list": "separator",
+    "post": "separator",
+    "profile": "separator"
+  },
+  {
+    "name": "tokimekiApp",
+    "list": "https://tokimeki.blue/profile/{did}/lists/{rkey}",
+    "post": "https://tokimeki.blue/profile/{handle}/post/{rkey}",
+    "profile": "https://tokimeki.blue/profile/{handle}"
+  },
+  {
+    "post": "separator",
+    "profile": "separator"
+  },
+  {
+    "name": "Bluesky Debug Page",
+    "post": "https://bsky-debug.app/handle?handle={handle}",
+    "profile": "https://bsky-debug.app/handle?handle={handle}"
+  },
+  {
+    "name": "uniresolverApp",
+    "post": "https://dev.uniresolver.io/#{did}",
+    "profile": "https://dev.uniresolver.io/#{did}"
+  },
+  {
+    "name": "didApp",
+    "post": "https://web.plc.directory/did/{did}",
+    "profile": "https://web.plc.directory/did/{did}"
+  },
+  {
+    "name": "atlasApp",
+    "post": "https://bsky.jazco.dev/thread/view?author_did={did}&post={rkey}",
+    "profile": "https://bsky.jazco.dev/atlas?s={handle}"
+  }
+]

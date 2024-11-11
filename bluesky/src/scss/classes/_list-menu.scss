@@ -1,0 +1,107 @@
+.list-menu {
+  color: rgb(var(--fg-color));
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1px;
+  padding: var(--border-radius-middle) 0;
+  user-select: none;
+
+  &__header {
+    color: rgb(var(--fg-color), 0.5);
+    font-weight: bold;
+    overflow: hidden;
+    padding: 0.25rem 1rem 0.5rem 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &:not(:first-child) {
+      padding-top: 0.75rem;
+    }
+
+    & > .svg-icon {
+      fill: rgb(var(--fg-color), 0.5);
+    }
+  }
+
+  & > a,
+  & > button,
+  & > &__item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    grid-gap: 0.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    &:focus, &:hover {
+      background-color: rgb(var(--accent-color), 0.25);
+    }
+    &:disabled,
+    &[disabled="true"] {
+      cursor: default;
+      opacity: 0.5;
+      &:focus, &:hover {
+        background-color: unset;
+      }
+    }
+
+    & > .svg-icon,
+    & > .svg-icon.list-menu__no-color-icon {
+      --icon-color: var(--fg-color);
+      fill: rgb(var(--icon-color), 0.75);
+    }
+    & > .svg-icon--cards {
+      --icon-color: var(--starter-pack-color);
+    }
+    & > .svg-icon--feed {
+      --icon-color: var(--feed-color);
+    }
+    & > .svg-icon--at,
+    & > .svg-icon--bookmark,
+    & > .svg-icon--chat,
+    & > .svg-icon--link,
+    & > .svg-icon--post,
+    & > .svg-icon--posts {
+      --icon-color: var(--post-color);
+    }
+    & > .svg-icon--repost,
+    & > .svg-icon--quoteRepost,
+    & > .svg-icon--share {
+      --icon-color: var(--share-color);
+    }
+    & > .svg-icon--like {
+      --icon-color: var(--like-color);
+    }
+    & > .svg-icon--list {
+      --icon-color: var(--list-color);
+    }
+    & > .svg-icon--pinOutline,
+    & > .svg-icon--pinOffOutline {
+      --icon-color: var(--pinned-post-color);
+    }
+    & > .svg-icon--alert,
+    & > .svg-icon--bookmarkOff,
+    & > .svg-icon--contentFiltering,
+    & > .svg-icon--lock,
+    & > .svg-icon--person,
+    & > .svg-icon--personOff,
+    & > .svg-icon--remove,
+    & > .svg-icon--volumeOn,
+    & > .svg-icon--volumeOff,
+    & > .svg-icon--wordMute {
+      --icon-color: var(--notice-color);
+    }
+
+    & > span {
+      color: rgb(var(--fg-color), 0.875);
+    }
+  }
+
+  & > hr {
+    border-bottom: 1px solid rgb(var(--fg-color), 0.125);
+    margin: 0 0.5rem;
+    &:first-child,
+    &:last-child {
+      display: none;
+    }
+  }
+}

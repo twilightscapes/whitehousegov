@@ -1,0 +1,59 @@
+.icon-button,
+.icon-button--nolabel {
+  margin: -0.75em;
+  padding: 0.75em;
+  &:disabled {
+    & > .icon-container {
+      & > .svg-icon {
+        fill: rgb(var(--fg-color), 0.25);
+      }
+    }
+  }
+  &:not(:disabled) {
+    cursor: pointer;
+    &:focus, &:hover {
+      & > .icon-container {
+        & > .svg-icon {
+          fill: rgb(var(--fg-color));
+        }
+      }
+
+      & > span {
+        color: rgb(var(--fg-color));
+      }
+    }
+  }
+
+  & > .icon-container {
+    pointer-events: none;
+
+    & > .svg-icon {
+      fill: rgb(var(--fg-color), 0.5);
+      font-size: 1em;
+    }
+  }
+
+  & > span {
+    color: rgb(var(--fg-color), 0.5);
+    font-weight: bold;
+    overflow: hidden;
+    pointer-events: none;
+    text-overflow: ellipsis;
+
+    // 非SPレイアウト
+    @include media-not-sp-layout() {
+      font-size: 0.875em;
+    }
+
+    // SPレイアウト
+    @include media-sp-layout() {
+      font-size: 0.75em;
+    }
+  }
+}
+.icon-button {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  grid-gap: 0 0.375em;
+}

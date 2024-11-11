@@ -12,17 +12,11 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = """
-      default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' *.youtube.com *.twitter.com *.disqus.com;
-      object-src 'none';
-      style-src 'self' 'unsafe-inline' *.googleapis.com;
-      img-src 'self' data: *.googleapis.com *.gstatic.com *.google.com *.twitter.com *.twimg.com *.youtube.com;
-      media-src 'none';
-      frame-src *;
-      font-src 'self' data: *.gstatic.com *.googleapis.com;
-      connect-src 'self';
-      frame-ancestors *;
-    """
+  Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' https:; connect-src 'self' https: wss: bsky.social *.bsky.social; img-src 'self' data: https: http: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https:;"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[redirects]]
+  from = "/bluesky/*"
+  to = "/bluesky/:splat"
+  status = 200

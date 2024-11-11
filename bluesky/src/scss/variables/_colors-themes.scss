@@ -1,0 +1,67 @@
+@mixin color-theme-light {
+  --color-scheme: light;
+  --bg-color: 255, 255, 255;
+  --bg-sub-color: 240, 240, 240;
+  --fg-color: 32, 32, 32;
+  --white-color: 255, 255, 255;
+  --red-color: 240, 32, 32;
+  --orange-color: 240, 128, 32;
+  --pink-color: 240, 64, 128;
+  --yellow-color: 160, 160, 0;
+  --green-color: 0, 160, 32;
+  --blue-color: 32, 64, 240;
+  --cyan-color: 0, 160, 240;
+  --cyan-dark-color: 0, 128, 255;
+  --purple-color: 192, 64, 192;
+}
+
+@mixin color-theme-light-gray {
+  --color-scheme: light;
+  --bg-color: 240, 238, 232;
+  --bg-sub-color: 224, 220, 216;
+  --fg-color: 32, 28, 24;
+  --white-color: 255, 255, 255;
+  --red-color: 240, 32, 32;
+  --orange-color: 240, 128, 32;
+  --pink-color: 240, 64, 128;
+  --yellow-color: 160, 160, 0;
+  --green-color: 0, 160, 32;
+  --blue-color: 32, 64, 240;
+  --cyan-color: 0, 160, 240;
+  --cyan-dark-color: 0, 128, 255;
+  --purple-color: 192, 64, 192;
+}
+
+@mixin color-theme-dark {
+  --color-scheme: dark;
+  --bg-color: 0, 0, 0;
+  --bg-sub-color: 24, 24, 24;
+  --fg-color: 224, 224, 224;
+  --white-color: 255, 255, 255;
+  --red-color: 240, 32, 32;
+  --orange-color: 240, 128, 32;
+  --pink-color: 240, 64, 128;
+  --yellow-color: 240, 240, 0;
+  --green-color: 32, 192, 64;
+  --blue-color: 32, 64, 240;
+  --cyan-color: 0, 192, 240;
+  --cyan-dark-color: 64, 128, 255;
+  --purple-color: 192, 64, 192;
+}
+
+@mixin color-theme-dark-gray {
+  --color-scheme: dark;
+  --bg-color: 16, 20, 24;
+  --bg-sub-color: 24, 28, 32;
+  --fg-color: 216, 220, 224;
+  --white-color: 255, 255, 255;
+  --red-color: 240, 32, 32;
+  --orange-color: 240, 128, 32;
+  --pink-color: 240, 64, 128;
+  --yellow-color: 240, 240, 0;
+  --green-color: 32, 192, 64;
+  --blue-color: 32, 64, 240;
+  --cyan-color: 0, 192, 240;
+  --cyan-dark-color: 64, 128, 255;
+  --purple-color: 192, 64, 192;
+}
