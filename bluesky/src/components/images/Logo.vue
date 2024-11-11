@@ -39,7 +39,7 @@ import SVGIcon from "@/components/images/SVGIcon.vue"
       justify-content: center;
       overflow: hidden;
       position: relative;
-      height: 1em;
+      height: .8em;
 
       &:deep(svg) {
         fill: rgb(var(--fg-color));
