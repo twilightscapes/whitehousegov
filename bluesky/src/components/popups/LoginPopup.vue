@@ -254,7 +254,7 @@ function submitCallback () {
           <AccountList :hasDeleteButton="false" />
         </div>
       </div>
-      <Copyright />
+    <!--  <Copyright /> -->
     </div>
   </div>
 </template>
