@@ -73,7 +73,7 @@ function openKeywordHistoryPopover ($event: Event) {
     <MyFeedList />
 
     <!-- コピーライト -->
-  <!--  <CopyRight /> -->
+   <CopyRight />
   </div>
 </template>
 
