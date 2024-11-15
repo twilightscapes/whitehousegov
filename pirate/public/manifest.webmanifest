@@ -1,7 +1,7 @@
 {
-  "id": "klearsky",
-  "name": "Klearsky",
-  "short_name": "Klearsky",
+  "id": "pirate",
+  "name": "PIRATE",
+  "short_name": "PIRATE",
   "scope": "/",
   "start_url": "/",
   "categories": [
@@ -14,22 +14,12 @@
   "background_color": "#202020",
   "icons": [
     {
-      "src": "/img/icon-192x192.png",
+      "src": "https://piratesocial.org/images/pwa/icon192.webp",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/img/icon-256x256.png",
-      "sizes": "256x256",
-      "type": "image/png"
-    },
-    {
-      "src": "/img/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png"
-    },
-    {
-      "src": "/img/icon-512x512.png",
+      "src": "https://piratesocial.org/images/pwa/icon512.webp",
       "sizes": "512x512",
       "type": "image/png"
     }
