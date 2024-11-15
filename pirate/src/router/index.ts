@@ -74,7 +74,7 @@ const router = createRouter({
             {
               path: "timeline",
               name: "timeline-home",
-              meta: { label: "PIRATE" },
+              meta: { label: "PIRATE Bluesky Client" },
               component: TimelineView,
             },
             {
