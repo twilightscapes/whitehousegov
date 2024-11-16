@@ -1,0 +1,18 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import { Image } from "astro:assets";
+
+const meta = {
+	description: "Redirecting to YouTube",
+	title: "PIRATE - YouTube",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="flex flex-col items-center justify-center min-h-screen">
+		<h1 class="text-2xl font-bold mb-4">Redirecting to YouTube...</h1>
+		<script>
+			window.location.href = "https://youtu.be";
+		</script>
+	</div>
+</PageLayout>
