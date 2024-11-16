@@ -11,14 +11,12 @@ import DynamicTheme from '@/components/DynamicTheme.astro';
 // <ViewTransitions />
 
 
-        // Function to check if the app is running in standalone mode
-        function isRunningStandalone() {
-            if (typeof window !== 'undefined') {
-                return window.matchMedia('(display-mode: standalone)').matches;
-            }
-            return ;
-        }
-
+function isRunningStandalone() {
+    if (typeof window !== 'undefined') {
+        return window.matchMedia('(display-mode: standalone)').matches;
+    }
+    return;
+}
 
 interface Props {
   meta?: {
@@ -61,27 +59,45 @@ const pageOgImage = ogImage || meta?.ogImage;
 			ogImage={pageOgImage} 
 		/>
 		<DynamicTheme />
+
+
+
 	</head>
 	
 	<body>
 		<SkipLink />
+				<div id="nav-container"></div>
 
-		{isRunningStandalone() && (
-
-
-
-					
-<ul class="pwa-persistent-nav">
-			<li><a href="/keystatic" class="nav-link">PIRATE</a></li>
-		<li><a href="/pirate" class="nav-link">Bluesky</a></li>
-		<li><a href="/x" target="_self" class="nav-link">X/Twitter</a></li>
-		<li><a href="/youtube.com" target="_blank" rel="noopener" class="nav-link">YouTube</a></li>
-		
-		  </ul>
-					
-
-			 )}
-
+				<ul class="pwa-persistent-nav">
+					<li><a href="/keystatic" class="nav-link">PIRATE</a></li>
+					<li><a href="/pirate" class="nav-link">Bluesky</a></li>
+					<li><a href="/x" target="_self" class="nav-link">X/Twitter</a></li>
+					<li><a href="/youtube.com" target="_blank" rel="noopener" class="nav-link">YouTube</a></li>
+				  </ul>
+				  
+				  <script is:inline>
+					// Check both standalone mode and window.navigator
+					const isPWA = window.matchMedia('(display-mode: standalone)').matches || 
+								  (window.navigator.standalone) || 
+								  document.referrer.includes('android-app://');
+								  
+					document.querySelector('.pwa-persistent-nav').style.display = isPWA ? 'flex' : 'none';
+				  </script>
+				  
+				  <style>
+					.pwa-persistent-nav {
+					  position: relative;
+					  top: 0;
+					  left: 0;
+					  right: 0;
+					  z-index: 1000;
+					  display: none;
+					  justify-content: space-around;
+					  padding: 1rem;
+					  background: var(--theme-surface-1);
+					  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+					}
+				  </style>
 
 		
 			<Header transition:persist>
@@ -223,25 +239,6 @@ const pageOgImage = ogImage || meta?.ogImage;
 		});
 		window.addEventListener('viewModeChanged', initializeScrollListener);
 	</script>
-<style>
-	.pwa-persistent-nav {
-	  position: relative;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	  z-index: 1000;
-	  display: flex;
-	  justify-content: space-around;
-	  padding: 1rem;
-	  background: var(--theme-surface-1);
-	  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-	}
-	
-	.nav-link {
-	  padding: 0.5rem 1rem;
-	  border-radius: 0.5rem;
-	  font-weight: bold;
-	}
-  </style>
+
 
 </html>		
