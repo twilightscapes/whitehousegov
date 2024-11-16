@@ -248,28 +248,28 @@ export default config({
       },
     }),
 
-    piratePosts: collection({
-      label: 'Pirate Posts',
-      path: 'src/content/piratePosts/*',
-      format: { contentField: 'content' },
-      slugField: 'title',
-      schema: {
-        title: fields.slug({ name: { label: 'Title' } }),
-        content: fields.markdoc({ label: 'Content' }),
-        createdAt: fields.datetime({ label: 'Created At' }),
-      },
-    }),
+    // piratePosts: collection({
+    //   label: 'Pirate Posts',
+    //   path: 'src/content/piratePosts/*',
+    //   format: { contentField: 'content' },
+    //   slugField: 'title',
+    //   schema: {
+    //     title: fields.slug({ name: { label: 'Title' } }),
+    //     content: fields.markdoc({ label: 'Content' }),
+    //     createdAt: fields.datetime({ label: 'Created At' }),
+    //   },
+    // }),
 
-    pirateFeeds: collection({
-      label: 'Pirate Feeds',
-      path: 'src/content/pirateFeeds/*',
-      slugField: 'title',
-      schema: {
-        title: fields.text({ label: 'Title' }),
-        feedUrl: fields.url({ label: 'Feed Url', description: 'The address to the Pirate users feed that you want to follow' }),
-        order: fields.number({ label: 'Order' }),
-      },
-    }),
+    // pirateFeeds: collection({
+    //   label: 'Pirate Feeds',
+    //   path: 'src/content/pirateFeeds/*',
+    //   slugField: 'title',
+    //   schema: {
+    //     title: fields.text({ label: 'Title' }),
+    //     feedUrl: fields.url({ label: 'Feed Url', description: 'The address to the Pirate users feed that you want to follow' }),
+    //     order: fields.number({ label: 'Order' }),
+    //   },
+    // }),
 
 
     rssFeeds: collection({
@@ -783,25 +783,25 @@ export default config({
     }),    
 
 
-    pirateSocial: singleton({
-      label: 'Settings',
-      path: 'src/content/pirate/',
-      schema: {
-        profile: fields.text({ label: 'Profile Name' }),
-        description: fields.text({ label: 'Profile Description' }),
+    // pirateSocial: singleton({
+    //   label: 'Settings',
+    //   path: 'src/content/pirate/',
+    //   schema: {
+    //     profile: fields.text({ label: 'Profile Name' }),
+    //     description: fields.text({ label: 'Profile Description' }),
 
-        // autoDeletePiratePosts: fields.checkbox({
-        //   label: 'Auto-delete Pirate Posts',
-        //   description: 'Enable this to automatically delete Pirate Posts',
-        //   defaultValue: false,
-        // }),
-        // autoDeleteTime: fields.number({
-        //   label: 'Auto-delete Time (in minutes)',
-        //   description: 'Set the time after which Pirate Posts will be deleted',
-        //   defaultValue: 1440, // 24 hours in minutes
-        // }),
-      },
-    }),
+    //     // autoDeletePiratePosts: fields.checkbox({
+    //     //   label: 'Auto-delete Pirate Posts',
+    //     //   description: 'Enable this to automatically delete Pirate Posts',
+    //     //   defaultValue: false,
+    //     // }),
+    //     // autoDeleteTime: fields.number({
+    //     //   label: 'Auto-delete Time (in minutes)',
+    //     //   description: 'Set the time after which Pirate Posts will be deleted',
+    //     //   defaultValue: 1440, // 24 hours in minutes
+    //     // }),
+    //   },
+    // }),
 
 
 
@@ -873,19 +873,14 @@ ui: {
     'Settings': [
       'siteSettings',
       'pwaSettings',
-      'menuItems',
+      // 'menuItems',
       'socialCard',
       'photoSettings',
       'styleAppearance',
       'language',
       'resumeSettings',
-    ],
-    'Pirate Social': [
-      'pirateSocial',
-      'piratePosts',
-      'pirateFeeds',
       'socialLinks',
-    ],
+    ]
   },
 },});
 

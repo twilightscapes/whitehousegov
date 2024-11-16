@@ -17,14 +17,29 @@ const socialLinks = await getCollection('socialLinks') as unknown as Array<{
 ---
 
 <div class="flex flex-wrap items-end gap-x-2" style="justify-content:center;">
-	<ul class="flex items-center gap-x-2" style="margin:0 auto 3vh auto;">
+	<ul class="flex items-center gap-x-2 pwa-persistent-nav" style="margin:0 auto 3vh auto;">
 		<li class="flex">
+			<li class="flex">
+				<a
+						class="inline-block p-1 sm:hover:text-link"
+						href="https://bsky.app"
+						rel={`noopener noreferrer `}
+						target="_blank"
+						aria-label="BlueSky"
+					><svg stroke="currentColor" fill="currentColor"  width="28px" height="28px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+						<g id="_-000000ff" transform="matrix(0.08,0,0,0.08,0,0)">
+							<path d="M8.96,21.14C18,15.26 29.94,16.24 39.41,20.59C56.8,28.37 72.56,39.56 86.23,52.79C101.14,66.64 114.07,82.43 126.36,98.6C135.14,109.91 142.18,122.41 149.96,134.38C158.22,120.17 167,106.18 177.4,93.42C185.58,82.7 194.25,72.32 203.79,62.79C219.83,45.31 238.86,30.16 260.65,20.53C270.31,16.14 282.54,15.16 291.53,21.61C297.98,26.69 298.79,35.49 300,43.02L300,49.45C298.88,67.35 297.27,85.22 295.59,103.07C293.9,113.62 294.19,124.73 289.66,134.63C284.29,146.45 274.74,156.37 263.03,162.03C253.07,166.96 242.13,170 231,170.37C228.01,170.43 225.1,171.23 222.21,171.88C233.2,174.76 244.42,177.75 254.01,184.1C263.34,189.82 271.91,199.36 271.74,210.92C272.49,223.22 266.06,234.36 259.12,243.98C253.28,251.45 247.25,258.96 239.52,264.56C230.44,271.25 221.13,278.45 209.85,280.84C203.76,281.94 197.27,282.98 191.32,280.7C181.51,277.49 174.26,269.32 169.53,260.44C164.06,251.08 160.68,240.72 157.31,230.48C154.78,222.59 153.32,214.34 149.92,206.75C145.45,217.64 142.91,229.25 138.06,240C134.25,249.92 129.02,259.27 122.82,267.87C117.62,274.12 111.03,279.59 103.27,282.24C96.3,283.7 88.69,283.91 82.09,280.85C75.43,278.43 69.87,273.93 64.13,269.92C51.82,259.47 40.9,247.25 32.72,233.28C28.3,224.93 24.01,215.79 25.07,206.08C25.89,195.95 33.54,187.82 42.14,183.21C53.49,177.59 65.72,173.91 78.23,172C73.48,171.08 68.8,169.59 63.91,169.62C55.17,169.55 46.78,166.61 38.88,163.09C24.46,156.73 12.86,144.09 8.17,128.99C5.71,122.87 5.88,116.18 4.81,109.76C3.86,103.59 3.94,97.33 3.02,91.16C1.85,83.15 2.06,75.02 1.13,66.99C0.45,61.52 0.27,56.01 0,50.51L0,41.79C1.13,34.4 2.5,25.88 8.96,21.14Z" style="fill-rule:nonzero;"/>
+						</g>
+					</svg></a></li>
+
+					
+
 			<a
 					class="inline-block p-1 sm:hover:text-link"
-					href="https://piratesocial.org"
+					href="https://pirateyoutube.com"
 					rel={`noopener noreferrer `}
 					target="_blank"
-					aria-label="Pirate Social"
+					aria-label="Pirate YouTube"
 				>{showCheck && <BlueCheck />}</a></li>
 		{socialLinks.map((link) => (
 			<li class="flex">
@@ -35,7 +50,7 @@ const socialLinks = await getCollection('socialLinks') as unknown as Array<{
 					target="_blank"
 					aria-label="Link to Social Site"
 				>
-					<Icon aria-hidden="true" class="h-10 w-10" focusable="false" name={link.data.icon} />
+					<Icon aria-hidden="true" class="h-7 w-7" focusable="false" name={link.data.icon} />
 					<span class="sr-only">{link.id}</span>
 				</a>
 			</li>
