@@ -1,0 +1,18 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import { Image } from "astro:assets";
+
+const meta = {
+	description: "Redirecting to X/Twitter",
+	title: "PIRATE - X/Twitter",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="flex flex-col items-center justify-center min-h-screen">
+		<h1 class="text-2xl font-bold mb-4">Redirecting to X/Twitter...</h1>
+		<script>
+			window.location.href = "https://x.com";
+		</script>
+	</div>
+</PageLayout>
