@@ -152,7 +152,6 @@ const collections = {
       order: z.any().transform(val => 
         (val === '.nan' || val === 'nan' || Number.isNaN(val)) ? undefined : Number(val)
       ).optional(),
-      standaloneOnly: z.boolean().optional()  // Add this line
     }),
   }),
 

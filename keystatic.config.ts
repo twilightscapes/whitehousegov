@@ -156,9 +156,7 @@ export default config({
           description: 'Optional: Leave blank for alphabetical sorting'
         }),
 
-        standaloneOnly: fields.checkbox({ label: 'Hide From Public Menu', description: 'If checked, this item will only appear when the site is viewed in PWA mode', defaultValue: false }),
-
-        isWebmention: fields.checkbox({ label: 'Is Webmention', defaultValue: false }),
+        isWebmention: fields.checkbox({ label: 'Is Webmention', defaultValue: true }),
       },
       slugField: 'friendlyName'
       
