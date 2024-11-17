@@ -6,51 +6,52 @@ import BlueCheck from "@/components/BlueCheck.astro";
 const siteSettings = await getEntry('siteSettings', 'main');
 const { showCheck } = siteSettings.data;
 
-const socialLinks = (await getCollection('socialLinks'))
-  .sort((a, b) => {
-    // If both have order, sort by order
-    if (a.data.order && b.data.order) {
-      return a.data.order - b.data.order;
-    }
-    // If only one has order, prioritize it
-    if (a.data.order) return -1;
-    if (b.data.order) return 1;
-    // Otherwise sort alphabetically by id
-    return a.id.localeCompare(b.id);
-  }) as unknown as Array<{
+interface SocialLink {
   id: string;
   data: {
     link: string;
     icon: string;
     isWebmention: boolean;
-    order: number;
+    order?: number;
+    friendlyName?: string;
   };
-}>;
+}
+
+const socialLinks = (await getCollection('socialLinks'))
+  .sort((a, b) => {
+    if (a.data.order != null && b.data.order != null) {
+      return a.data.order - b.data.order;
+    }
+    if (a.data.order != null) return -1;
+    if (b.data.order != null) return 1;
+    return a.id.localeCompare(b.id);
+  }) as unknown as SocialLink[];
 ---
 
-<div class="flex flex-wrap items-end gap-x-2" style="justify-content:center;">
-	<ul class="flex items-center gap-x-2 pwa-persistent-nav" style="margin:0 auto 3vh auto;">
-		<li class="flex">
-			<a
-					class="inline-block p-1 sm:hover:text-link"
-					href="https://pirateyoutube.com"
-					rel={`noopener noreferrer `}
-					target="_blank"
-					aria-label="Pirate YouTube"
-				>{showCheck && <BlueCheck />}</a></li>
-		{socialLinks.map((link) => (
-			<li class="flex">
-				<a
-					class="inline-block p-1 sm:hover:text-link"
-					href={link.data.link}
-					rel={`noopener noreferrer ${link.data.isWebmention ? "me authn" : ""}`}
-					target="_blank"
-					aria-label="Link to Social Site"
-				>
-					<Icon aria-hidden="true" class="h-7 w-7" focusable="false" name={link.data.icon} />
-					<span class="sr-only">{link.id}</span>
-				</a>
-			</li>
-		))}
-	</ul>
+<div class="flex flex-wrap items-end gap-x-2 w-full" style={{justifyContent: "center"}}>
+  <ul class="flex flex-wrap items-center gap-2 pwa-persistent-nav" style={{margin: "0 auto 3vh auto"}}>
+    <li class="flex">
+      <a
+        class="inline-block p-1 sm:hover:text-link"
+        href="https://pirateyoutube.com"
+        rel="noopener noreferrer"
+        target="_blank"
+        aria-label="Pirate YouTube"
+      >{showCheck && <BlueCheck />}</a>
+    </li>
+    {socialLinks.map((link) => (
+      <li class="flex">
+        <a
+          class="inline-block p-1 sm:hover:text-link"
+          href={link.data.link}
+          rel={`noopener noreferrer ${link.data.isWebmention ? "me authn" : ""}`}
+          target="_blank"
+          aria-label="Link to Social Site"
+        >
+          <Icon aria-hidden="true" class="h-7 w-7" focusable="false" name={link.data.icon} />
+          <span class="sr-only">{link.id}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
 </div>
