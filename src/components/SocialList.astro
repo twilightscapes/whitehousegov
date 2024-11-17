@@ -12,33 +12,32 @@ interface SocialLink {
     link: string;
     icon: string;
     isWebmention: boolean;
-    order?: number;
+    order: number | undefined;  // Added this line
     friendlyName?: string;
   };
 }
 
-const socialLinks = (await getCollection('socialLinks'))
-  .sort((a, b) => {
-    if (a.data.order != null && b.data.order != null) {
+
+const socialLinks = (await getCollection('socialLinks'));
+// console.log('Full social links data:', socialLinks);
+
+const sortedLinks = socialLinks.sort((a, b) => {
+    if (typeof a.data.order === 'number' && typeof b.data.order === 'number') {
       return a.data.order - b.data.order;
     }
-    if (a.data.order != null) return -1;
-    if (b.data.order != null) return 1;
+    if (typeof a.data.order === 'number') return -1;
+    if (typeof b.data.order === 'number') return 1;
     return a.id.localeCompare(b.id);
-  }) as unknown as SocialLink[];
+});
+
+
+
+  
 ---
 
 <div class="flex flex-wrap items-end gap-x-2 w-full" style={{justifyContent: "center"}}>
   <ul class="flex flex-wrap items-center gap-2 pwa-persistent-nav" style={{margin: "0 auto 3vh auto"}}>
-    <!-- <li class="flex">
-      <a
-        class="inline-block p-1 sm:hover:text-link"
-        href="https://pirateyoutube.com"
-        rel="noopener noreferrer"
-        target="_blank"
-        aria-label="Pirate YouTube"
-      >{showCheck && <BlueCheck />}</a>
-    </li> -->
+
     {socialLinks.map((link) => (
       <li class="flex">
         <a

@@ -139,16 +139,24 @@ const collections = {
     }),
   }),
 
+
+
+
   socialLinks: defineCollection({
     type: 'data',
     schema: z.object({
       friendlyName: z.string().optional(),
       link: z.string().optional(),
       icon: z.string().optional(),
-      order: z.number().optional(),
       isWebmention: z.boolean().optional(),
+      order: z.any().transform(val => 
+        (val === '.nan' || val === 'nan' || Number.isNaN(val)) ? undefined : Number(val)
+      ).optional()
     }),
   }),
+
+
+
 
   siteSettings: defineCollection({
     type: 'data',
@@ -255,7 +263,6 @@ const collections = {
       pitch: z.string().optional(),
       defaultDirectory: z.string().optional(),
       showGallerySelector: z.boolean().optional(),
-      showSwitch: z.boolean().optional(),
       galleryImages: z.array(z.object({
         image: z.string().optional(),
         caption: z.string().optional(),

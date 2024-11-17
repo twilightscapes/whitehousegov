@@ -149,13 +149,7 @@ export default config({
           ],
           defaultValue: 'game-icons:pirate-flag'
         }),
-        // order: fields.conditional(
-        //   fields.checkbox({ label: 'Set Custom Order?' }),
-        //   {
-        //     true: fields.number({ label: 'Order Number' }),
-        //     false: fields.empty()
-        //   }
-        // ),
+
 
         order: fields.number({ 
           label: 'Order',
