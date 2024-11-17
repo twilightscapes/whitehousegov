@@ -1,7 +1,7 @@
 ---
 import { getEntry, getCollection } from 'astro:content';
 import { Icon } from "astro-icon/components";
-import BlueCheck from "@/components/BlueCheck.astro";
+// import BlueCheck from "@/components/BlueCheck.astro";
 
 const siteSettings = await getEntry('siteSettings', 'main');
 const { showCheck } = siteSettings.data;
@@ -30,7 +30,7 @@ const socialLinks = (await getCollection('socialLinks'))
 
 <div class="flex flex-wrap items-end gap-x-2 w-full" style={{justifyContent: "center"}}>
   <ul class="flex flex-wrap items-center gap-2 pwa-persistent-nav" style={{margin: "0 auto 3vh auto"}}>
-    <li class="flex">
+    <!-- <li class="flex">
       <a
         class="inline-block p-1 sm:hover:text-link"
         href="https://pirateyoutube.com"
@@ -38,7 +38,7 @@ const socialLinks = (await getCollection('socialLinks'))
         target="_blank"
         aria-label="Pirate YouTube"
       >{showCheck && <BlueCheck />}</a>
-    </li>
+    </li> -->
     {socialLinks.map((link) => (
       <li class="flex">
         <a

@@ -126,6 +126,7 @@ export default config({
         icon: fields.select({
           label: 'Icon',
           options: [
+            { label: 'Pirate', value: 'game-icons:pirate-flag' },
             { label: 'X/Twitter', value: 'bi:twitter-x' },
 
             { label: 'Bluesky', value: 'simple-icons:bluesky' },
@@ -149,7 +150,7 @@ export default config({
             { label: 'WhatsApp', value: 'bi:whatsapp' },
             { label: 'Wordpress', value: 'bi:wordpress' },
           ],
-          defaultValue: 'simple-icons:bluesky'
+          defaultValue: 'game-icons:pirate-flag'
         }),
         // order: fields.conditional(
         //   fields.checkbox({ label: 'Set Custom Order?' }),
