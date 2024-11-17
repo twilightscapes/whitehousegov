@@ -128,20 +128,17 @@ export default config({
           options: [
             { label: 'Pirate', value: 'game-icons:pirate-flag' },
             { label: 'X/Twitter', value: 'bi:twitter-x' },
-
             { label: 'Bluesky', value: 'simple-icons:bluesky' },
             { label: 'Threads', value: 'bi:threads' },
-
-
-            { label: 'GitHub', value: 'bi:github' },
             { label: 'Facebook', value: 'bi:facebook' },
+            { label: 'Mastodon', value: 'bi:mastodon' },
+            { label: 'Instagram', value: 'bi:instagram' },
+            { label: 'GitHub', value: 'bi:github' },
             { label: 'YouTube', value: 'bi:youtube' },
             { label: 'Twitch', value: 'bi:twitch' },
             { label: 'LinkedIn', value: 'bi:linkedin' },
-            { label: 'Instagram', value: 'bi:instagram' },
-            { label: 'Mastodon', value: 'bi:mastodon' },
-            { label: 'Patreon', value: 'mdi:patreon' },
             { label: 'Pinterest', value: 'bi:pinterest' },
+            { label: 'Patreon', value: 'mdi:patreon' },
             { label: 'Reddit', value: 'bi:reddit' },
             { label: 'Skype', value: 'bi:skype' },
             { label: 'Slack', value: 'bi:slack' },
