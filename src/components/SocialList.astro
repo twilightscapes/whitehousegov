@@ -6,12 +6,24 @@ import BlueCheck from "@/components/BlueCheck.astro";
 const siteSettings = await getEntry('siteSettings', 'main');
 const { showCheck } = siteSettings.data;
 
-const socialLinks = await getCollection('socialLinks') as unknown as Array<{
+const socialLinks = (await getCollection('socialLinks'))
+  .sort((a, b) => {
+    // If both have order, sort by order
+    if (a.data.order && b.data.order) {
+      return a.data.order - b.data.order;
+    }
+    // If only one has order, prioritize it
+    if (a.data.order) return -1;
+    if (b.data.order) return 1;
+    // Otherwise sort alphabetically by id
+    return a.id.localeCompare(b.id);
+  }) as unknown as Array<{
   id: string;
   data: {
     link: string;
     icon: string;
     isWebmention: boolean;
+    order: number;
   };
 }>;
 ---

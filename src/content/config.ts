@@ -145,6 +145,7 @@ const collections = {
       friendlyName: z.string().optional(),
       link: z.string().optional(),
       icon: z.string().optional(),
+      order: z.number().optional(),
       isWebmention: z.boolean().optional(),
     }),
   }),

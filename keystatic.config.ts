@@ -122,6 +122,7 @@ export default config({
       schema: {
         friendlyName: fields.text({ label: 'Friendly Name' }),
         link: fields.text({ label: 'Link URL' }),
+        
         icon: fields.select({
           label: 'Icon',
           options: [
@@ -150,10 +151,25 @@ export default config({
           ],
           defaultValue: 'simple-icons:bluesky'
         }),
+        // order: fields.conditional(
+        //   fields.checkbox({ label: 'Set Custom Order?' }),
+        //   {
+        //     true: fields.number({ label: 'Order Number' }),
+        //     false: fields.empty()
+        //   }
+        // ),
+
+        order: fields.number({ 
+          label: 'Order',
+          description: 'Optional: Leave blank for alphabetical sorting'
+        }),
+
         isWebmention: fields.checkbox({ label: 'Is Webmention', defaultValue: true }),
       },
       slugField: 'friendlyName'
+      
     }),
+    
     
     
 
@@ -878,7 +894,7 @@ ui: {
     'Settings': [
       'siteSettings',
       'pwaSettings',
-      // 'menuItems',
+      'menuItems',
       'socialCard',
       'photoSettings',
       'styleAppearance',
