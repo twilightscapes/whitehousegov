@@ -1,8 +1,0 @@
-declare module "*.vue"
-declare module "@/composables/**/*"
-declare module "crypto-js/aes.js"
-declare module "crypto-js/enc-utf8.js"
-declare module "crypto-js/md5.js"
-declare module "extend"
-declare module "file-saver"
-declare module "portal-vue"
