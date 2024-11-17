@@ -12,8 +12,9 @@ interface SocialLink {
     link: string;
     icon: string;
     isWebmention: boolean;
-    order: number | undefined;  // Added this line
+    order: number | undefined;
     friendlyName?: string;
+    standaloneOnly?: boolean;
   };
 }
 
@@ -43,8 +44,6 @@ const socialLinks = (await getCollection('socialLinks'))
     {socialLinks.map((link) => (
       <li 
         class="flex" 
-        data-standalone-only={link.data.standaloneOnly}
-        style={link.data.standaloneOnly ? "display: none;" : ""}
       >
         <a
           class="inline-block p-1 sm:hover:text-link"
