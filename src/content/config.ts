@@ -151,9 +151,11 @@ const collections = {
       isWebmention: z.boolean().optional(),
       order: z.any().transform(val => 
         (val === '.nan' || val === 'nan' || Number.isNaN(val)) ? undefined : Number(val)
-      ).optional()
+      ).optional(),
+      standaloneOnly: z.boolean().optional()  // Add this line
     }),
   }),
+
 
 
 
