@@ -5,13 +5,7 @@
   </div>
 
 <div align="center">
-<!--   <a href="https://pirateweb.org">
-    <img src="public/images/homepage/featureImage/src.webp" alt="Logo" width="100%" height="auto">
-  </a>
- -->
-  
 
-<!-- https://github.com/user-attachments/assets/1f2cb472-cffe-4c51-ae21-c61a37003172 -->
 
 
   <strong align="center" style="font-size:30px">You're the Captain now!</strong>
@@ -42,7 +36,7 @@
 
 # Install PIRATE &nbsp; | &nbsp; Quick Start
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pirate/pirate) 
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/piratesocial/pirate) 
 
 <!-- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftwilightscapes%2Fpirate&project-name=astro-pirate-theme) -->
 
@@ -80,17 +74,14 @@ Setup takes about 4 minutes and <strong><i>requires a valid email address</i></s
 
 
 
-
 <div align="center">
 
 <br />
-<h3><strong><i>T R A K</i></strong> Technology Stack</h3>
+<h3><strong><i>T R A K</i></strong> | Technology Stack</h3>
 PIRATE is built on industry leading technologies, and is designed from the ground up, using the best, most secure and modern development technology stack available today: 
 <a href=""><img alt="" role="presentation" aria-hidden="true" src="public/images/partners/typescript-logo.webp" width="24%" height="auto" /></a>
 <a href="https://react.dev"><img alt="React Logo" role="presentation" aria-hidden="true" src="public/images/partners/react-logo.webp" width="24%" height="auto" /></a>
 <a href="https://astro.build"><img alt="Astro Logo" role="presentation" aria-hidden="true" src="public/images/partners/Astro-logo.webp" width="24%" height="auto" /></a>
-<!-- <a href="https://netlify.com"><img alt="Netlify Logo" role="presentation" aria-hidden="true" src="public/images/partners/netlify-logo.webp" width="14%" height="auto" /></a>
-<a href="https://github.com"><img alt="GitHub Logo" role="presentation" aria-hidden="true" src="public/images/partners/github-logo.webp" width="15%" height="auto" /></a> -->
 <a href="https://keystatic.com"><img alt="Keystatic Logo" role="presentation" aria-hidden="true" src="public/images/partners/keystatic-logo.webp" width="24%" height="auto" /></a>
 
 
