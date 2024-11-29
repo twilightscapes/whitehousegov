@@ -42,7 +42,7 @@
 
 # Install PIRATE &nbsp; | &nbsp; Quick Start
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/piratesocial/pirate) 
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pirate/pirate) 
 
 <!-- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Ftwilightscapes%2Fpirate&project-name=astro-pirate-theme) -->
 
@@ -79,15 +79,6 @@ Setup takes about 4 minutes and <strong><i>requires a valid email address</i></s
 - PiRATE Social features a full version of BlueSky built in
 
 
-## 🏴‍☠️ PIRATE Social
-
-PIRATE is not your typical social network. It's a decentralized network of individualy owned personal websites acting together as a new social content distribution model.
-
-Here's how it works: instead of relying on a central platform, PIRATE leverages the power of Netlify and GitHub to utilize their free services for hosting your own platorm. Your individual website becomes your hub for social interactions on BlueSky. Just go to yourwebsite.com/pirate and login. Now you can control your website, and your social media in the same app on your phone! All for FREE!
-
-Your PIRATE website is actually a Progressive Web App (PWA), which means you can access it seamlessly from any of your devices. Being a PWA also means there are no App Stores to worry about!
-
-PIRATE gives you the tools to easily edit your homepage, update your profile, post your resume, and publish engaging posts. It's super easy to get started, without any complicated technical barriers.
 
 
 <div align="center">
