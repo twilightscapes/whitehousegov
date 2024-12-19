@@ -5,8 +5,13 @@ import { getEntry } from 'astro:content';
 const allResumeItems = await getCollection('resume');
 const resumeSettings = await getEntry('resumeSettings', 'index');
 
-const leftColumnItems = resumeSettings?.data?.leftColumnItems || [];
-const rightColumnItems = resumeSettings?.data?.rightColumnItems || [];
+// Add type guard at the top
+if (!resumeSettings) {
+  throw new Error('Resume settings are required but not found');
+}
+
+const leftColumnItems = resumeSettings.data.leftColumnItems || [];
+const rightColumnItems = resumeSettings.data.rightColumnItems || [];
 
 function sortResumeItems(items: CollectionEntry<'resume'>[], order: string[]): CollectionEntry<'resume'>[] {
   return order.map(slug => items.find(item => item.slug === slug)).filter((item): item is CollectionEntry<'resume'> => item !== undefined);

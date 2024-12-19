@@ -17,11 +17,15 @@ interface Testimonial {
 const testimonials = await getCollection('testimonials');
 const sortedTestimonials = testimonials.sort((a: Testimonial, b: Testimonial) => (a.data.order ?? 0) - (b.data.order ?? 0));
 
-
 const siteSettings = await getEntry('siteSettings', 'main');
+if (!siteSettings) {
+  throw new Error('Site settings are required but not found');
+}
+
 const { defaultView } = siteSettings.data;
 
 ---
+
 
 <div class={`contentpanel ${defaultView === 'swipe' ? 'slider panels horizontal-slider' : 'grid-container'}`} >
   <div class="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }} />

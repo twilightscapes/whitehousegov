@@ -17,8 +17,15 @@ import Resume from '@/components/Resume.astro';
 import PhotoSection from "@/components/PhotoGallery.astro"
 const siteSettings = await getEntry('siteSettings', 'main');
 const pwaSettings = await getEntry('pwaSettings', 'index');
-const { defaultView, MAX_POSTS } = siteSettings.data;
 const homeContent = await getEntry('homepage', 'index');
+const language = await getEntry('language', 'index');
+
+
+if (!siteSettings || !pwaSettings || !homeContent || !language) {
+  throw new Error('Required content settings not found');
+}
+
+const { defaultView, MAX_POSTS } = siteSettings.data;
 import App from '@/components/App.astro';
 const reader = createReader(process.cwd(), keystaticConfig);
 
@@ -179,8 +186,6 @@ const showHomeGallery = homepage?.showHomeGallery ?? false;
 
 const allPosts = await getAllPosts();
 const allPostsSorted = sortMDByDate(allPosts, true).slice(0, MAX_POSTS);
-
-const language = await getEntry('language', 'index');
 type Section = {
   name: string;
   show: boolean;
