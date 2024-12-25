@@ -4,7 +4,7 @@ import { colorPicker } from './src/components/ColorPicker.tsx';
 export default config({
   storage: import.meta.env.PROD ? { kind: 'cloud' } : { kind: 'local' },
   cloud: import.meta.env.PROD
-    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'twilightscapes/twilight-astro' }
+    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'toddlambert/toddlambert' }
     : undefined,
   collections: {
     posts: collection({
@@ -671,6 +671,8 @@ export default config({
           directory: 'public/images/styleapps',
           publicPath: '/images/styleapps'
         }),
+        backgroundVideo: fields.text({ label: 'Background Video', defaultValue: '', description: 'Copy the url of an embed from youtube and paste here - just the url' }),
+
         siteFont: fields.text({ label: 'Site Font', defaultValue: 'Bowlby One', description: 'Enter the name of any Google Font' }),
         borderRadius: fields.text({ label: 'Border Radius', description: 'Border Radius of elements on page (0) for square', validation: { isRequired: false }, defaultValue: "0px" }),
         divider5: fields.empty(),

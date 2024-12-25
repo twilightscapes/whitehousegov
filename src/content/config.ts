@@ -151,10 +151,9 @@ const collections = {
       isWebmention: z.boolean().optional(),
       order: z.any().transform(val => 
         (val === '.nan' || val === 'nan' || Number.isNaN(val)) ? undefined : Number(val)
-      ).optional(),
+      ).optional()
     }),
   }),
-
 
 
 
@@ -275,6 +274,7 @@ const collections = {
     type: 'data',
     schema: z.object({
       backgroundImage: z.string().optional(),
+      backgroundVideo: z.string().optional(),
       siteFont: z.string().optional(),
       borderRadius: z.string().optional(),
       lightBg: z.string().optional(),
