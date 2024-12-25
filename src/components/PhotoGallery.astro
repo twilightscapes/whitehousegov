@@ -60,8 +60,10 @@ const { defaultView } = siteSettings.data;
 <div style="position:relative;">
 
 
-{showGallerySelector && (
+
   <div class="cattags" style={{ width: '100%', margin: '0px auto 0 auto', display: 'flex', justifyContent:'center', gap: '0', color: '' }}>
+    
+    {showGallerySelector && (
     <select aria-label="View Available Galleries" id="directorySelect" name="directorySelect" style={{ background: '', border: '1px solid #000', borderRadius: 'var(--border-radius)', padding: '8px', boxShadow: '0px 0px 0px 1px #000', opacity:'.9', color:'#fff' }}>
       {directories.map((dir) => (
         <option value={dir} selected={dir === defaultDirectory}>
@@ -69,11 +71,13 @@ const { defaultView } = siteSettings.data;
         </option>
       ))}
     </select>
+    )}
+    
     {showSwitch && (
     <div class="switcher" style={{marginTop:'10px'}}><Switch client:load defaultView={defaultView} /></div>
     )}
   </div>
-)}
+
 
 
 
@@ -109,7 +113,7 @@ const { defaultView } = siteSettings.data;
 
 
 <style>
-.switcher{position:relative !important; margin:5px -360px 0 0;}
+/* .switcher{position:relative !important; margin:5px -360px 0 0;} */
 
 .post-card1 {
   display: flex;
