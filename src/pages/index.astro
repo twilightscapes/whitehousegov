@@ -21,9 +21,16 @@ const homeContent = await getEntry('homepage', 'index');
 const language = await getEntry('language', 'index');
 
 
+
+
+const styleAppearance = await getEntry('styleapps', 'index');
+const { backgroundVideo } = styleAppearance.data;
+
 if (!siteSettings || !pwaSettings || !homeContent || !language) {
   throw new Error('Required content settings not found');
 }
+
+
 
 const { defaultView, MAX_POSTS } = siteSettings.data;
 import App from '@/components/App.astro';
@@ -253,6 +260,21 @@ flex-direction: column;
 }
 
 </style>
+
+{backgroundVideo && (
+  <iframe
+    src={backgroundVideo}
+    title="video title"
+    width="100%"
+    height="800"
+    frameborder="0"
+    allowfullscreen
+    class="vidbox"
+    style="height:100vh !important; position:absolute; top:1; z-index: -1;"
+    loading="lazy"
+></iframe>
+)}
+
 <PageLayout title={homeContent.data.title} description={pwaSettings.data.description}>
 	<div class="scroll-snap-container flex flex-col home panel">
 		{sortedSections.map(section => (
