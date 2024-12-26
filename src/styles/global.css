@@ -507,21 +507,21 @@ button.topper{background:var(--theme-header) !important;}
 	}
 
 	#directorySelect {
-		position: absolute;
+		/* position: absolute;
 		top:0;
 		left: 0;
-		right: 0;
+		right: 0; */
 	  	z-index: 2;
-		max-width: 300px;
-		margin: 0 auto;
+		max-width: 300px !important;
 		margin-top:5px;
+		margin-right:10px;
 		padding: 1vh 1vw;
 		background: var(--theme-header)
 	  }
 
 	  body:has(#homemap) {overflow-y:auto !important;}
 
-	  body:has(.header) #directorySelect{top:5px !important;}
+	  /* body:has(.header) #directorySelect{top:5px !important;} */
 
 	  body:has(.home) #footer{display: none;}
 
