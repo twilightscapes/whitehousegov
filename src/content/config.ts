@@ -197,6 +197,7 @@ const collections = {
       display: z.enum(['standalone', 'fullscreen', 'minimal-ui', 'browser']).optional(),
       icon192: z.string().optional(),
       icon512: z.string().optional(),
+      location: z.string().optional(),
     }),
   }),
 

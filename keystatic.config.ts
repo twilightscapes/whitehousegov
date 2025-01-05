@@ -4,7 +4,7 @@ import { colorPicker } from './src/components/ColorPicker.tsx';
 export default config({
   storage: import.meta.env.PROD ? { kind: 'cloud' } : { kind: 'local' },
   cloud: import.meta.env.PROD
-    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'toddlambert/toddlambert' }
+    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'yourproject/projectid' }
     : undefined,
   collections: {
     posts: collection({
@@ -14,7 +14,7 @@ export default config({
       path: 'src/content/post/*/',
       format: { contentField: 'content' },
       schema: {
-        publishDate: fields.datetime({ label: 'Publish Date' }),
+        publishDate: fields.datetime({ label: 'Publish Date', validation: { isRequired: true } }),
         title: fields.slug({ name: { label: 'Title' } }),
         description: fields.text({ label: 'Description', validation: { length: { min: 50, max: 160 } } }),
         draft: fields.checkbox({ label: 'Draft', defaultValue: false }),
@@ -376,6 +376,8 @@ export default config({
         name: fields.text({ label: 'App Name' }),
         shortName: fields.text({ label: 'Short Name' }),
 
+        location: fields.text({ label: 'Location Map', description: 'Copy the src url from the google maps location share embed section'  }),
+
         divider: fields.empty(),
 
         screenshot: fields.image({
@@ -495,8 +497,8 @@ export default config({
         }),
 
         showApp: fields.checkbox({
-          label: 'Show App Module',
-          description: 'Hide/Show custom App section on the home page',
+          label: 'Show Map Module',
+          description: 'Hide/Show custom map section on the home page - requires the src url from an embeded google map',
           defaultValue: false,
         }),
 
