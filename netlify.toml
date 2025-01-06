@@ -18,9 +18,9 @@
     Content-Security-Policy = """
       default-src 'self' 'unsafe-inline' 'unsafe-eval' https:;
       connect-src 'self' https: wss: bsky.social *.bsky.social;
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' *.youtube.com *.twitter.com *.disqus.com;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' *.youtube.com *.stripe.com *.twitter.com *.disqus.com;
       style-src 'self' 'unsafe-inline' https: *.googleapis.com;
-      img-src 'self' data: https: http: blob: *.googleapis.com *.gstatic.com *.google.com *.twitter.com *.twimg.com *.youtube.com;
+      img-src 'self' data: https: http: blob: *.googleapis.com *.gstatic.com *.google.com *.twitter.com *.twimg.com *.stripe.com *.youtube.com;
       media-src 'self';
       frame-src *;
       font-src 'self' data: *.gstatic.com *.googleapis.com;
