@@ -247,6 +247,7 @@ const collections = {
       infoblock2Order: z.number().optional(),
       infoblock3Order: z.number().optional(),
       photosectiontitle: z.string().optional(),
+      locationtitle: z.string().optional(),
       faqsectiontitle: z.string().optional(),
       testimonialtitle: z.string().optional(),
       postsectiontitle: z.string().optional(),

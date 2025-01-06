@@ -567,6 +567,7 @@ export default config({
         
         
         photosectiontitle: fields.text({ label: 'Photo Section Title Header'  }),
+        locationtitle: fields.text({ label: 'Location Map Title Header'  }),
         faqsectiontitle: fields.text({ label: 'FAQ Title Header'  }),
         testimonialtitle: fields.text({ label: 'Testimonials Title Header' }),
         postsectiontitle: fields.text({ label: 'Posts Title Header'  }),
@@ -876,7 +877,7 @@ ui: {
   navigation: {
     'Site Pages and Posts': [
       'home',
-      // 'pages',
+      'pages',
       'posts',
     ],
     'Content Modules': [
