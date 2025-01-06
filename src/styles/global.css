@@ -357,8 +357,8 @@ button.topper{background:var(--theme-header) !important;}
 		display: flex;
 		flex-direction: row;
 		-webkit-overflow-scrolling: touch;
-		gap: 10vw;
-		scroll-padding: 0 5vw;
+		/* gap: 10vw; */
+		/* scroll-padding: 0 5vw; */
 		overscroll-behavior: contain;
 		scroll-snap-align: center;
 		transition: transform .4s;
@@ -368,7 +368,7 @@ button.topper{background:var(--theme-header) !important;}
 		z-index: 0;
 		position: relative;
 		top: 0;
-		min-width: 100vw;
+		/* min-width: 100vw; */
 	  }
 	  
 	  .slider .post-card1 {
