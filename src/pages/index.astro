@@ -32,7 +32,8 @@ if (!siteSettings || !pwaSettings || !homeContent || !language) {
 
 
 
-const { defaultView, MAX_POSTS } = siteSettings.data;
+
+const { defaultView, MAX_POSTS, showCheck } = siteSettings.data;
 import App from '@/components/App.astro';
 const reader = createReader(process.cwd(), keystaticConfig);
 
@@ -342,7 +343,7 @@ flex-direction: column;
 							);
 						case 'testimonials':
 							return <div class="testi" style="padding:30px;">
-								<h2 class="glow text-[clamp(1.4rem,3.9vw,4rem)] shadow-text text-center theme-accent">{homeContent.data.testimonialtitle}</h2><Testimonials /></div>;
+								<h2 class="glow text-[clamp(1.4rem,3.9vw,4rem)] shadow-text text-center theme-accent backdrop-blur-lg">{homeContent.data.testimonialtitle}</h2><Testimonials /></div>;
 						default:
 							return null;
 					}
@@ -362,12 +363,19 @@ flex-direction: column;
     </section>
   )}
 
-  
+{showCheck && 
+
 <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 <h2 class="title2 text-center text-[clamp(1.2rem,3vw,2rem)] mb-6 backdrop-blur-lg">Buy This Website</h2>
 <stripe-pricing-table pricing-table-id="prctbl_1Qe7TQIbXHwBH2q3OBiMeCaf"
 publishable-key="pk_test_51Qe75VIbXHwBH2q3XjaYKRUr0AUGprwFX2ottMpaxZqAqiEoBS5nGA4GatemfTmUHs6CSPWFhBzPJjH2qv0JuLLI00421mokn9">
 </stripe-pricing-table>
+
+}
+
+
+
+
 
 	</div>
 </PageLayout>
