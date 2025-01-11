@@ -12,12 +12,12 @@ import DynamicTheme from '@/components/DynamicTheme.astro';
 // <ViewTransitions />
 
 
-function isRunningStandalone() {
-    if (typeof window !== 'undefined') {
-        return window.matchMedia('(display-mode: standalone)').matches;
-    }
-    return;
-}
+// function isRunningStandalone() {
+//     if (typeof window !== 'undefined') {
+//         return window.matchMedia('(display-mode: standalone)').matches;
+//     }
+//     return;
+// }
 
 interface Props {
   meta?: {
@@ -73,8 +73,7 @@ const pageOgImage = ogImage || meta?.ogImage;
 
 				
 				  
-				  <script is:inline>
-					// Check both standalone mode and window.navigator
+				  <!-- <script is:inline>
 					const isPWA = window.matchMedia('(display-mode: standalone)').matches || 
 								  (window.navigator.standalone) || 
 								  document.referrer.includes('android-app://');
@@ -95,7 +94,7 @@ const pageOgImage = ogImage || meta?.ogImage;
 					  background: var(--theme-surface-1);
 					  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 					}
-				  </style>
+				  </style> -->
 
 		
 			<Header transition:persist>
