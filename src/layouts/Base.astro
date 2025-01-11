@@ -8,8 +8,8 @@ import Header from "@/components/layout/Header.astro";
 import { siteConfig } from "@/site-config";
 // import SiteLinks from '@/components/SocialList.astro';
 import DynamicTheme from '@/components/DynamicTheme.astro';
-// import { ViewTransitions } from 'astro:transitions';
-// <ViewTransitions />
+import { ViewTransitions } from 'astro:transitions';
+
 
 
 // function isRunningStandalone() {
@@ -41,9 +41,13 @@ const pageTitle = title || meta?.title;
 const pageDescription = description || meta?.description;
 const pageArticleDate = articleDate || meta?.articleDate;
 const pageOgImage = ogImage || meta?.ogImage;
+
+
 ---
-<html lang={siteConfig.lang} data-theme="light">
+
+<html lang={siteConfig.lang} data-theme="light" transition:name="root" transition:animate="none">
 	<head>
+		<ViewTransitions />
 		<script>
 			function getInitialTheme() {
 				const savedTheme = localStorage.getItem('theme');
@@ -67,7 +71,7 @@ const pageOgImage = ogImage || meta?.ogImage;
 	
 	<body>
 		<SkipLink />
-				<div id="nav-container"></div>
+				<div id="nav-container">
 
 				<!-- <SiteLinks /> -->
 
@@ -100,10 +104,11 @@ const pageOgImage = ogImage || meta?.ogImage;
 			<Header transition:persist>
 
 			</Header>
-		
-				<main id="main">
-					<div id="top"></div>
-					<slot />
+		</div>
+		<div id="top"></div>
+				<main id="main"  transition:animate="slide" >
+					
+					<slot/>
 				</main>
 				{ showFooter && (
 					<Footer />
