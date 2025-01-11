@@ -21,9 +21,7 @@ const siteSettings = await getEntry('siteSettings', 'main');
 if (!siteSettings) {
   throw new Error('Site settings are required but not found');
 }
-
 const { defaultView } = siteSettings.data;
-
 ---
 
 
