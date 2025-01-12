@@ -29,8 +29,9 @@ const { defaultView } = siteSettings.data;
   <div class="sliderSpacer" style={{ height: "", paddingTop: "", display: "" }} />
   {sortedTestimonials.map((testimonial: Testimonial) => (
     <div class="quotecard post-card12" >
-      <div style="display:flex; justify-center:center; vertical-align:center; margin:0 auto">
+      <div style="display:flex flex-direction:column; justify-center:center; vertical-align:center; margin:0 auto; text-align:center;">
         {testimonial.data.image && (
+          <div>
           <Image
             src={testimonial.data.image}
             loading="lazy"
@@ -40,9 +41,11 @@ const { defaultView } = siteSettings.data;
             style="max-height:140px;"
             class="max-h-[140px] relative object-contain mx-auto"
           />
+          {testimonial.data.name && <div>{testimonial.data.name}</div>}
+          </div>
         )}
       
-        {testimonial.data.name && <div>{testimonial.data.name}</div>}
+        
         {testimonial.data.quote && (
           <blockquote class="w-full relative text-[clamp(.8rem,1vw,1.5rem)]">
             {testimonial.data.quote}
