@@ -109,6 +109,7 @@ export default config({
         ctaUrl: fields.text({ label: 'CTA Url', description: 'The location of your CTA', defaultValue: '/', validation: { length: { min: 1 } } }),
         description: fields.text({ label: 'Description', description: 'The description for the CTA', multiline: true }),
         showFancy: fields.checkbox({ label: 'Show Fancy Button', description: 'Use the Fancy style with animated button', defaultValue: true }),
+        showTransition: fields.checkbox({ label: 'Show page transition', description: 'Use the view transition on page change', defaultValue: true }),
       },
       slugField: 'description'
     }),
