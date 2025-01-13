@@ -1,9 +1,16 @@
 showFeature: false
-featureImage:
-  src: /images/homepage/featureImage/src.webp
-  alt: Become A PIRATE!
+featureImage: {}
 youtube:
-  discriminant: false
+  discriminant: true
+  value:
+    url: https://youtu.be/z_wmefqR8-w
+    title: Setting a video feature on the homepage
+    controls: false
+    useCustomPlayer: true
+    mute: true
+    loop: false
+    start: 0
+    videoOnly: false
 cta: Keystatic Cloud Sign Up
 showBioOnHome: true
 showApp: false
@@ -16,11 +23,11 @@ showTestOnHome: false
 pitch: How It Works
 pitch2: Social Media That YOU Control
 pitch3: High Seas Freedom
-featureOrder: .nan
-bioOrder: 2
+featureOrder: 1
+bioOrder: 3
 appOrder: .nan
 galleryOrder: .nan
-postsOrder: 1
+postsOrder: 2
 resumeOrder: .nan
 faqOrder: .nan
 testimonialsOrder: .nan
