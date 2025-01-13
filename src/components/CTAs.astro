@@ -7,7 +7,8 @@ interface Props {
   showTransition?: boolean;
 }
 
-const { title, description, ctaUrl, showTransition, showFancy = false } = Astro.props;
+// Add default value for showTransition
+const { title, description, ctaUrl, showTransition = false, showFancy = false } = Astro.props;
 ---
 
 {description && <p>{description}</p>}
@@ -15,7 +16,12 @@ const { title, description, ctaUrl, showTransition, showFancy = false } = Astro.
 {title && (
   <button class="button special font mt-4 p-6">
     {showFancy && <div class="fancy"></div>}
-    <a href={ctaUrl} class="font no-underline border-none shadow-none" style="color:white; padding:2vh 0" {...(showTransition ? { "data-astro-reload": "" } : {})}>
+    <a 
+      href={ctaUrl} 
+      class="font no-underline border-none shadow-none" 
+      style="color:white; padding:2vh 0"
+      data-astro-reload={showTransition}
+    >
       <span class="butttext font">{title}</span>
     </a>
   </button>
