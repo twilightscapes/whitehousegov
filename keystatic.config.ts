@@ -4,7 +4,7 @@ import { colorPicker } from './src/components/ColorPicker.tsx';
 export default config({
   storage: import.meta.env.PROD ? { kind: 'cloud' } : { kind: 'local' },
   cloud: import.meta.env.PROD
-    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'yourproject/projectid' }
+    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'dog-poopers/dogpoopers' }
     : undefined,
   collections: {
     posts: collection({
@@ -109,7 +109,7 @@ export default config({
         ctaUrl: fields.text({ label: 'CTA Url', description: 'The location of your CTA', defaultValue: '/', validation: { length: { min: 1 } } }),
         description: fields.text({ label: 'Description', description: 'The description for the CTA', multiline: true }),
         showFancy: fields.checkbox({ label: 'Show Fancy Button', description: 'Use the Fancy style with animated button', defaultValue: true }),
-        showTransition: fields.checkbox({ label: 'Show page transition', description: 'Use the view transition on page change', defaultValue: true }),
+        showTransition: fields.checkbox({ label: 'Hide page transition', description: 'Hide the view transition on page change', defaultValue: false }),
       },
       slugField: 'description'
     }),
