@@ -11,7 +11,7 @@ showTitles: true
 showDates: false
 enableImageBlur: true
 showSocial: false
-showCheck: true
+showCheck: false
 showTags: true
 MAX_POSTS: 3
 MAX_POSTS_PER_PAGE: 20
