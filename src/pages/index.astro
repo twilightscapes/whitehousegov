@@ -290,7 +290,10 @@ flex-direction: column;
 									title: cta.data.title,
 									description: cta.data.description || '',
 									ctaUrl: cta.data.ctaUrl,
-									showFancy: cta.data.showFancy
+									showFancy: cta.data.showFancy,
+                  showTransition: cta.data.showTransition
+                  
+                  
 								} : undefined
 							}} />;
 						case 'bio':
@@ -359,6 +362,7 @@ flex-direction: column;
         description={homeCTA.data.description || ''}
         ctaUrl={homeCTA.data.ctaUrl}
         showFancy={homeCTA.data.showFancy}
+        showTransition={homeCTA.data.showTransition}
       />
     </section>
   )}
