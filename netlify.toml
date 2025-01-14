@@ -2,11 +2,9 @@
   command = "./update-theme.sh && pnpm build"
   publish = "dist"
   functions = "netlify/functions"
-  environment = { NODE_VERSION = "20" }
   
 [functions]
   node_bundler = "esbuild"
-  node_version = "20"
 
 [[headers]]
   for = "/*"
