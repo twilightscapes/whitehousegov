@@ -15,8 +15,8 @@ importers:
         specifier: 3.1.5
         version: 3.1.5(astro@4.16.7(@types/node@22.10.5)(rollup@2.79.2)(terser@5.37.0)(typescript@5.7.3))
       '@astrojs/netlify':
-        specifier: ^6.0.1
-        version: 6.0.1(@types/node@22.10.5)(astro@4.16.7(@types/node@22.10.5)(rollup@2.79.2)(terser@5.37.0)(typescript@5.7.3))(jiti@1.21.7)(rollup@2.79.2)(terser@5.37.0)(yaml@2.7.0)
+        specifier: ^5.5.4
+        version: 5.5.4(@types/node@22.10.5)(astro@4.16.7(@types/node@22.10.5)(rollup@2.79.2)(terser@5.37.0)(typescript@5.7.3))(rollup@2.79.2)(terser@5.37.0)
       '@astrojs/react':
         specifier: ^4.1.3
         version: 4.1.3(@types/node@22.10.5)(@types/react-dom@18.3.0)(@types/react@18.3.5)(jiti@1.21.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(terser@5.37.0)(yaml@2.7.0)
@@ -301,10 +301,10 @@ packages:
     peerDependencies:
       astro: ^4.8.0
 
-  '@astrojs/netlify@6.0.1':
-    resolution: {integrity: sha512-Y8rsMVClPp6cJuAClL0BAr4p8FtNtvaOhODy8YHUfe8QsaNSrnUTJ6Np+RbTBKBTQ9JkRKGe5F0f0LaAD21euw==}
+  '@astrojs/netlify@5.5.4':
+    resolution: {integrity: sha512-nIjD8cC/lGCxTtBUDrG50YEwmsgNxGB1nMZS0wwT7tFlmT2iBpYkTz3G+wmpxH89Hzs1xuMs1s21IcITyuKqEw==}
     peerDependencies:
-      astro: ^5.0.0
+      astro: ^4.2.0
 
   '@astrojs/prism@3.1.0':
     resolution: {integrity: sha512-Z9IYjuXSArkAUx3N6xj6+Bnvx8OdUSHA8YoOgyepp3+zJmtVYJIl/I18GozdJVW1p5u/CNpl3Km7/gwTJK85cw==}
@@ -339,8 +339,8 @@ packages:
     resolution: {integrity: sha512-/ca/+D8MIKEC8/A9cSaPUqQNZm+Es/ZinRv0ZAzvu2ios7POQSsVD+VOj7/hypWNsNM3T7RpfgNq7H2TU1KEHA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
 
-  '@astrojs/underscore-redirects@0.4.0':
-    resolution: {integrity: sha512-Urt32++4ql0IFTTNejnRIN7LPJ6YzU9QXLcc4RXm5or1RLPnQBKVrLvmDxKx3eT72l7ZAi6W4L5E7pcbWbYDRA==}
+  '@astrojs/underscore-redirects@0.3.4':
+    resolution: {integrity: sha512-vYuYtIrTwxFlDRIhuekscorsHdLL8Hr3mgOczfM1tRWVPn54dDNcKG0DmfL4DlC5YJRoqVaVdUs508Hw643NTw==}
 
   '@astrojs/vercel@8.0.1':
     resolution: {integrity: sha512-0TgXOlT8HpZNyLpbFuw2tAvo5Azdz/PlRg8/Oak7Skj3uivhSePR9ftt0uq93ofgzHtF7Gzs9BKcH+BsAwff9Q==}
@@ -6444,19 +6444,18 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/netlify@6.0.1(@types/node@22.10.5)(astro@4.16.7(@types/node@22.10.5)(rollup@2.79.2)(terser@5.37.0)(typescript@5.7.3))(jiti@1.21.7)(rollup@2.79.2)(terser@5.37.0)(yaml@2.7.0)':
+  '@astrojs/netlify@5.5.4(@types/node@22.10.5)(astro@4.16.7(@types/node@22.10.5)(rollup@2.79.2)(terser@5.37.0)(typescript@5.7.3))(rollup@2.79.2)(terser@5.37.0)':
     dependencies:
       '@astrojs/internal-helpers': 0.4.1
-      '@astrojs/underscore-redirects': 0.4.0
+      '@astrojs/underscore-redirects': 0.3.4
       '@netlify/functions': 2.8.2
       '@vercel/nft': 0.27.10(rollup@2.79.2)
       astro: 4.16.7(@types/node@22.10.5)(rollup@2.79.2)(terser@5.37.0)(typescript@5.7.3)
-      esbuild: 0.24.2
-      vite: 6.0.7(@types/node@22.10.5)(jiti@1.21.7)(terser@5.37.0)(yaml@2.7.0)
+      esbuild: 0.21.5
+      vite: 5.4.11(@types/node@22.10.5)(terser@5.37.0)
     transitivePeerDependencies:
       - '@types/node'
       - encoding
-      - jiti
       - less
       - lightningcss
       - rollup
@@ -6466,8 +6465,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-      - tsx
-      - yaml
 
   '@astrojs/prism@3.1.0':
     dependencies:
@@ -6533,7 +6530,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/underscore-redirects@0.4.0': {}
+  '@astrojs/underscore-redirects@0.3.4': {}
 
   '@astrojs/vercel@8.0.1(astro@4.16.7(@types/node@22.10.5)(rollup@2.79.2)(terser@5.37.0)(typescript@5.7.3))(react@18.3.1)(rollup@2.79.2)':
     dependencies:

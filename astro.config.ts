@@ -109,10 +109,6 @@ export default defineConfig({
         strict: false,
       },
     },
-    build: {
-      assetsInlineLimit: 0,
-      chunkSizeWarningLimit: 50000,
-    },
     plugins: [rawFonts([".ttf", ".woff"])],
   },
   adapter: adapter
