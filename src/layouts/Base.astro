@@ -45,7 +45,7 @@ const pageOgImage = ogImage || meta?.ogImage;
 
 ---
 
-<html lang={siteConfig.lang} data-theme="light" transition:name="root" transition:animate="none">
+<html lang={siteConfig.lang} data-theme="light">
 	<head>
 		<ViewTransitions />
 		<script>
@@ -101,12 +101,12 @@ const pageOgImage = ogImage || meta?.ogImage;
 				  </style> -->
 
 		
-			<Header transition:persist>
+			<Header>
 
 			</Header>
 		</div>
 		<div id="top"></div>
-				<main id="main" transition:animate="slide" >
+				<main id="main" >
 					
 					<slot/>
 				</main>
