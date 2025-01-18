@@ -333,8 +333,13 @@ flex-direction: column;
 									
 									<div style="padding:2vh 3%" class={`contentpanel ${defaultView === 'swipe' ? 'slider panels horizontal-slider' : 'grid-container'}`}>
 									
-                    <h2 class="glow text-[clamp(1.4rem,3.9vw,4rem)] shadow-text text-center theme-accent backdrop-blur-lg" style="display:block; margin-bottom:2vh; width:100%;">{homeContent.data.postsectiontitle}</h2>
                     
+                    {homeContent.data.postsectiontitle && (
+                      <h2 class="glow text-[clamp(1.4rem,3.9vw,4rem)] shadow-text text-center theme-accent backdrop-blur-lg" style="display:block; margin-bottom:2vh; width:100%;">
+                        {homeContent.data.postsectiontitle}
+                      </h2>
+                    )}
+
                     {allPostsSorted.map((p) => <PostPreview post={p} withDesc />)}
 										{ShowMore && (
 											<a class="viewmore no-underline text-white text-center block" href="/posts/" style="padding:1vh 1rem; margin:0 50px 50px 50px;">
