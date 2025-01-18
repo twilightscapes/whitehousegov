@@ -23,8 +23,8 @@ const language = await getEntry('language', 'index');
 
 
 
-const styleAppearance = await getEntry('styleapps', 'index');
-const { backgroundVideo } = styleAppearance.data;
+
+
 
 if (!siteSettings || !pwaSettings || !homeContent || !language) {
   throw new Error('Required content settings not found');
@@ -269,19 +269,7 @@ flex-direction: column;
 
 <PageLayout title={homeContent.data.title} description={pwaSettings.data.description}>
 
-  {backgroundVideo && (
-    <iframe
-      src={backgroundVideo}
-      title="video title"
-      width="100%"
-      height="800"
-      frameborder="0"
-      allowfullscreen
-      class="vidbox"
-      style="height:100vh !important; position:absolute; top:1; z-index: -1;"
-      loading="lazy"
-  ></iframe>
-  )}
+  
   
 	<div class="scroll-snap-container prose-pirate flex flex-col home">
 		{sortedSections.map(section => (

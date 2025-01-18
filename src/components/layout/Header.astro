@@ -12,6 +12,7 @@ const { showHeader, showLogo, showTheme, showSearch, showSwitch, showHome, logoI
 
 const styleAppearance = await getEntry('styleapps', 'index');
 const { backgroundImage } = styleAppearance.data;
+const { backgroundVideo } = styleAppearance.data;
 
 const url = new URL(Astro.request.url);
 const menuLinks = await getMenuLinks();
@@ -105,6 +106,20 @@ style="flex-direction: column;"
   <img class="backimage w-2.5 h-2.5" src={backgroundImage} alt="Default Background" width="10" height="10" />
   )}
 
+
+{backgroundVideo && (
+  <iframe
+    src={backgroundVideo}
+    title="video title"
+    width="100%"
+    height="800"
+    frameborder="0"
+    allowfullscreen
+    class="vidbox backimage"
+    style="height:100vh !important;"
+    loading="lazy"
+></iframe>
+)}
 
 
 <script lang="ts">
