@@ -63,7 +63,7 @@ const playerVars: { [key: string]: number | string } = {
       <div class="bottom-tray" style="">
 
         <label for="progress" style="width:100%;">{language.data.progress}
-          <span style="width:100%; padding:1.5vh 1rem; background:#111; border-radius:var(--border-radius);"><input type="range" id="progress" min="0" max="100" value="0" class="progress-bar"></span>
+          {title && <span style="width:100%; padding:1.5vh 1rem; background:#111; border-radius:var(--border-radius);"><input type="range" id="progress" min="0" max="100" value="0" class="progress-bar"></span>}
         </label>
 
         <label for="volume">{language.data.volume}
