@@ -38,13 +38,27 @@ const postSchema = z.object({
   }).optional(),
 });
 
+const contactFormSettings = defineCollection({
+  type: 'data',
+  schema: z.object({
+    showName: z.boolean().optional(),
+    showPhone: z.boolean().optional(),
+    showUpload: z.boolean().optional(),
+    extraFieldLabel: z.string().optional(),
+    showExtraField: z.boolean().optional(),
+    showMap: z.boolean().optional(),
+    extraFieldLabel2: z.string().optional(),
+    showExtraField2: z.boolean().optional(),
+  }),
+});
+
 const collections = {
   posts: defineCollection({
     type: 'content',
     schema: postSchema,
   }),
 
-
+  contactFormSettings,
 
   pages: defineCollection({
     type: 'content',
@@ -65,6 +79,8 @@ const collections = {
       showTransition: z.boolean().optional(),
     }),
   }),
+
+  
 
   pitches: defineCollection({
     type: 'data',
@@ -140,9 +156,6 @@ const collections = {
     }),
   }),
 
-
-
-
   socialLinks: defineCollection({
     type: 'data',
     schema: z.object({
@@ -155,9 +168,6 @@ const collections = {
       ).optional()
     }),
   }),
-
-
-
 
   siteSettings: defineCollection({
     type: 'data',

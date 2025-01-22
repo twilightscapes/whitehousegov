@@ -4,7 +4,7 @@ import { colorPicker } from './src/components/ColorPicker.tsx';
 export default config({
   storage: import.meta.env.PROD ? { kind: 'cloud' } : { kind: 'local' },
   cloud: import.meta.env.PROD
-    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'dog-poopers/dogpoopers' }
+    ? { project: import.meta.env.VITE_KEYSTATIC_PROJECT || 'pirate/pirate' }
     : undefined,
   collections: {
     posts: collection({
@@ -855,6 +855,20 @@ export default config({
       },
     }),
 
+    contactFormSettings: singleton({
+      label: 'Contact Form Settings',
+      path: 'src/content/contactFormSettings/',
+      schema: {
+        showName: fields.checkbox({ label: 'Show Name Field', defaultValue: true }),
+        showPhone: fields.checkbox({ label: 'Show Phone Field', defaultValue: true }),
+        showUpload: fields.checkbox({ label: 'Show Upload Field', defaultValue: true }),
+        extraFieldLabel: fields.text({ label: 'Extra Field Label', description: 'Label for the extra text field' }),
+        showExtraField: fields.checkbox({ label: 'Show Extra Field', defaultValue: false }),
+        showMap: fields.checkbox({ label: 'Show Map', defaultValue: true }),
+        extraFieldLabel2: fields.text({ label: 'Extra Field Label 2', description: 'Label for the second extra text field' }),
+        showExtraField2: fields.checkbox({ label: 'Show Extra Field 2', defaultValue: false }),
+      },
+    }),
 
   },
 
@@ -879,6 +893,7 @@ ui: {
       'home',
       'pages',
       'posts',
+      'contactFormSettings',
     ],
     'Content Modules': [
       'bio',
