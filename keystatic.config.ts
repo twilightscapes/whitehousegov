@@ -759,6 +759,7 @@ export default config({
         homelink: fields.text({ label: 'Home' }),
         copyright: fields.text({ label: 'Copyright' }),
         goback: fields.text({ label: 'Back' }),
+        top: fields.text({ label: 'Top' }),
         viewmore: fields.text({ label: 'View More' }),
         allimages: fields.text({ label: 'All Images' }),
         close: fields.text({ label: 'Close' }),

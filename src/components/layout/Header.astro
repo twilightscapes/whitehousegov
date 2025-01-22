@@ -8,7 +8,7 @@ import { getMenuLinks, siteConfig } from "@/site-config";
 import GoBack from "@/components/GoBack.astro";
 const siteSettings = await getEntry('siteSettings', 'main');
 const { showHeader, showLogo, showTheme, showSearch, showSwitch, showHome, logoImage, defaultView, showCheck } = siteSettings.data;
-
+const language = await getEntry('language', 'index');
 
 const styleAppearance = await getEntry('styleapps', 'index');
 const { backgroundImage } = styleAppearance.data;
@@ -97,7 +97,7 @@ id="to-top-btn"
 style="flex-direction: column;"
 >
 <svg  class="w-8 h-8" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M14 20h-4v-9l-3.5 3.5l-2.42-2.42L12 4.16l7.92 7.92l-2.42 2.42L14 11z"/></svg>
-<span class="--theme-header" style="font-size:10px; font-weight: bold;">Top</span>
+<span class="--theme-header" style="font-size:10px; font-weight: bold;">{language.data.top}</span>
 </button>
 
 </div>
