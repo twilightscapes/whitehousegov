@@ -56,14 +56,14 @@ const playerVars: { [key: string]: number | string } = {
     <div class="custom-controls">
       <div class="topblock"></div>
       
-      <div class="center-controls">
+      <div class={title ? "center-controls1" : "center-controls"}>
         <button id="play-pause" class="play-pause-button">►</button>
         {title && <h2 class="video-title title1">{title}</h2>}
       </div>
       <div class="bottom-tray" style="">
 
         <label for="progress" style="width:100%;">{language.data.progress}
-          {title && <span style="width:100%; padding:1.5vh 1rem; background:#111; border-radius:var(--border-radius);"><input type="range" id="progress" min="0" max="100" value="0" class="progress-bar"></span>}
+          <span style="width:100%; padding:1.5vh 1rem; background:#111; border-radius:var(--border-radius);"><input type="range" id="progress" min="0" max="100" value="0" class="progress-bar"></span>
         </label>
 
         <label for="volume">{language.data.volume}
@@ -387,7 +387,7 @@ const playerVars: { [key: string]: number | string } = {
     opacity: 1;
     background-color: rgba(0, 0, 0, .5); 
   }
-  .center-controls {
+  .center-controls1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -396,6 +396,16 @@ const playerVars: { [key: string]: number | string } = {
     transition: opacity 0.1s ease;
     transition: opacity 0.1s ease;
     background:#000;
+  }
+    .center-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: opacity 0.1s ease;
+    transition: opacity 0.1s ease;
+    background:none;
   }
   .play-pause-button {
     font-size: 3rem;
