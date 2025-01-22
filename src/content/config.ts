@@ -172,6 +172,7 @@ const collections = {
       showSearch: z.boolean().optional(),
       showFooter: z.boolean().optional(),
       defaultView: z.enum(['grid', 'swipe']).optional(),
+      themeMode: z.enum(['light', 'dark', 'user']).optional(),
       showTitles: z.boolean().optional(),
       showDates: z.boolean().optional(),
       enableImageBlur: z.boolean().optional(),
