@@ -1,6 +1,6 @@
 logoImage: /images/logo/logoImage.svg
 defaultView: swipe
-themeMode: dark
+themeMode: user
 MAX_POSTS: 3
 MAX_POSTS_PER_PAGE: 20
 showHeader: true
