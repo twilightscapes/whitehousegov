@@ -57,6 +57,7 @@ const playerVars: { [key: string]: number | string } = {
       <div class="topblock"></div>
       
       <div class={title ? "center-controls1" : "center-controls"}>
+
         <button id="play-pause" class="play-pause-button">►</button>
         {title && <h2 class="video-title title1">{title}</h2>}
       </div>
@@ -387,6 +388,16 @@ const playerVars: { [key: string]: number | string } = {
     opacity: 1;
     background-color: rgba(0, 0, 0, .5); 
   }
+  .center-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: opacity 0.1s ease;
+    transition: opacity 0.1s ease;
+    background:none !important;
+  }
   .center-controls1 {
     display: flex;
     flex-direction: column;
@@ -397,16 +408,7 @@ const playerVars: { [key: string]: number | string } = {
     transition: opacity 0.1s ease;
     background:#000;
   }
-    .center-controls {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    transition: opacity 0.1s ease;
-    transition: opacity 0.1s ease;
-    background:none;
-  }
+
   .play-pause-button {
     font-size: 3rem;
     background: none;
