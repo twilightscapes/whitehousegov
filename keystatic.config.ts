@@ -254,13 +254,16 @@ export default config({
     menuItems: collection({
       label: 'Menu Items',
       path: 'src/content/menu/*',
-      slugField: 'path',
+      slugField: 'name', 
       schema: {
+        name: fields.text({ label: 'Name' }),
         title: fields.text({ label: 'Title' }),
-        path: fields.text({ label: 'Path' }),
+        path: fields.text({ label: 'Path' }), 
         order: fields.number({ label: 'Order' }),
       },
     }),
+
+
 
     // piratePosts: collection({
     //   label: 'Pirate Posts',
