@@ -1,7 +1,9 @@
 showRobots: false
 siteUrl: https://thewhitehouse.blog
-name: The White House Blog
+name: The White House Blog - PARODY
 shortName: WH BLOG
+location: >-
+  https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5062.050590504133!2d-77.03902892270179!3d38.897556171724126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7547d5f6f8f%3A0x9189ce80cfe6cbb2!2s1600%20Pennsylvania%20Avenue%20NW%2C%20Washington%2C%20DC%2020500!5e1!3m2!1sen!2sus!4v1737674325502!5m2!1sen!2sus
 screenshot: /images/pwa/screenshot.png
 description: The blog of Donald J. Trump
 themeColor: rgba(13, 19, 45, 1)
