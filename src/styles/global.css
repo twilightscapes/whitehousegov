@@ -188,7 +188,7 @@ body {
 	  }
 	  
 	  
-	  
+	 .slider h2.ext {margin-top:-40px !important;}
 	  
 	  
 	  .quotecard {
@@ -459,6 +459,8 @@ button.topper{background:var(--theme-header) !important;}
 			min-height: 40vh !important;
 		}
 		
+		.slider h2.ext {margin-top:-10px !important;}
+
 		.grid-container .video-container, .grid-container .video-container .youtube-embed iframe,  .slider .video-container .youtube-embed iframe {min-height: 30vh !important; max-height: 200px !important;}
 
 		.grid-container iframe.exturl {
