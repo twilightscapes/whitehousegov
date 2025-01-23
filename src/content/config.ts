@@ -38,9 +38,10 @@ const postSchema = z.object({
   }).optional(),
 });
 
-const contactFormSettings = defineCollection({
+const contactPage = defineCollection({
   type: 'data',
   schema: z.object({
+    content: z.string().optional(),
     showName: z.boolean().optional(),
     showPhone: z.boolean().optional(),
     showUpload: z.boolean().optional(),
@@ -58,7 +59,7 @@ const collections = {
     schema: postSchema,
   }),
 
-  contactFormSettings,
+  contactPage,
 
   pages: defineCollection({
     type: 'content',

@@ -1,0 +1,8 @@
+showName: true
+showPhone: true
+showUpload: true
+showExtraField: true
+extraFieldLabel: Extra 1
+showExtraField2: true
+extraFieldLabel2: Extra 2
+showMap: false

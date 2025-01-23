@@ -855,18 +855,23 @@ export default config({
       },
     }),
 
-    contactFormSettings: singleton({
-      label: 'Contact Form Settings',
-      path: 'src/content/contactFormSettings/',
+
+    
+
+    contactPage: singleton({
+      label: 'Contact Page',
+      path: 'src/content/contactPage/',
       schema: {
         showName: fields.checkbox({ label: 'Show Name Field', defaultValue: true }),
         showPhone: fields.checkbox({ label: 'Show Phone Field', defaultValue: true }),
         showUpload: fields.checkbox({ label: 'Show Upload Field', defaultValue: true }),
-        extraFieldLabel: fields.text({ label: 'Extra Field Label', description: 'Label for the extra text field' }),
         showExtraField: fields.checkbox({ label: 'Show Extra Field', defaultValue: false }),
-        showMap: fields.checkbox({ label: 'Show Map', defaultValue: true }),
-        extraFieldLabel2: fields.text({ label: 'Extra Field Label 2', description: 'Label for the second extra text field' }),
+        extraFieldLabel: fields.text({ label: 'Extra Field Label', description: 'Label for the extra text field' }),
         showExtraField2: fields.checkbox({ label: 'Show Extra Field 2', defaultValue: false }),
+        extraFieldLabel2: fields.text({ label: 'Extra Field Label 2', description: 'Label for the second extra text field' }),
+        showMap: fields.checkbox({ label: 'Show Map', defaultValue: true }),
+        
+        
       },
     }),
 
@@ -893,7 +898,7 @@ ui: {
       'home',
       'pages',
       'posts',
-      'contactFormSettings',
+      'contactPage',
     ],
     'Content Modules': [
       'bio',

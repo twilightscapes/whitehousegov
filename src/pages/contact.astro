@@ -1,6 +1,5 @@
 ---
 import PageLayout from "@/layouts/Base.astro";
-import { getEntry } from 'astro:content';
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../keystatic.config';
 
@@ -10,16 +9,19 @@ const meta = {
 };
 
 const reader = createReader(process.cwd(), keystaticConfig);
-const contactFormSettings = await reader.singletons.contactFormSettings.read();
+const contactPage = await reader.singletons.contactPage.read();
+console.log(contactPage);
 
-const showName = contactFormSettings?.showName ?? true;
-const showPhone = contactFormSettings?.showPhone ?? true;
-const showUpload = contactFormSettings?.showUpload ?? true;
-const showExtraField = contactFormSettings?.showExtraField ?? false;
-const extraFieldLabel = contactFormSettings?.extraFieldLabel ?? 'Extra Field';
-const showMap = contactFormSettings?.showMap ?? true;
-const showExtraField2 = contactFormSettings?.showExtraField2 ?? false;
-const extraFieldLabel2 = contactFormSettings?.extraFieldLabel2 ?? 'Extra Field 2';
+
+const showName = contactPage?.showName ?? true;
+const showPhone = contactPage?.showPhone ?? true;
+const showUpload = contactPage?.showUpload ?? true;
+const showExtraField = contactPage?.showExtraField ?? false;
+const extraFieldLabel = contactPage?.extraFieldLabel ?? 'Extra Field';
+const showMap = contactPage?.showMap ?? true;
+const showExtraField2 = contactPage?.showExtraField2 ?? false;
+const extraFieldLabel2 = contactPage?.extraFieldLabel2 ?? 'Extra Field 2';
+const content = contactPage?.content ?? '';
 
 import App from '@/components/App.astro';
 ---
@@ -85,6 +87,10 @@ import App from '@/components/App.astro';
 <PageLayout meta={meta}>
   <br />
   <div class="flexbutt" style={`gap: 4vw; padding: 0 4%; ${showMap ? '' : 'justify-content: center;'}`}>
+    {content && (
+      <div class="content-area" style="padding-bottom: 2vh;" dangerouslySetInnerHTML={{ __html: content }}>
+      </div>
+    )}
     <form
       class="flexcheek"
       name="contact"
@@ -119,21 +125,21 @@ import App from '@/components/App.astro';
         </p>
       )}
 
-{showExtraField && (
-  <p>
-    <label html-for="extraField" aria-label={extraFieldLabel}>
-      <input type="text" id="extraField" name="extraField" placeholder={extraFieldLabel} />
-    </label>
-  </p>
-)}
+      {showExtraField && (
+        <p>
+          <label html-for="extraField" aria-label={extraFieldLabel}>
+            <input type="text" id="extraField" name="extraField" placeholder={extraFieldLabel} />
+          </label>
+        </p>
+      )}
 
-{showExtraField2 && (
-  <p>
-    <label html-for="extraField2" aria-label={extraFieldLabel2}>
-      <input type="text" id="extraField2" name="extraField2" placeholder={extraFieldLabel2} />
-    </label>
-  </p>
-)}
+      {showExtraField2 && (
+        <p>
+          <label html-for="extraField2" aria-label={extraFieldLabel2}>
+            <input type="text" id="extraField2" name="extraField2" placeholder={extraFieldLabel2} />
+          </label>
+        </p>
+      )}
 
       <br />
 
@@ -152,8 +158,6 @@ import App from '@/components/App.astro';
         </p>
       )}
 
-
-
       <div class="" style="display: grid; place-items: center; margin: 1vh auto; color: #fff; width: 100%; border: 0px solid var(--theme-accent2);">
         <button class="button stripe-button" style="margin: 0" type="submit">
           Send Message
@@ -167,4 +171,7 @@ import App from '@/components/App.astro';
       </div>
     )}
   </div>
+  <br />
+  <br />
+  <br />
 </PageLayout>
