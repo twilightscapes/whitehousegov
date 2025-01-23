@@ -1,23 +1,14 @@
-showFeature: false
-featureImage: {}
+showFeature: true
+featureImage:
+  src: /images/homepage/featureImage/src.avif
 youtube:
-  discriminant: true
-  value:
-    url: https://youtu.be/z_wmefqR8-w
-    title: Setting a video feature on the homepage
-    controls: false
-    useCustomPlayer: true
-    mute: true
-    loop: false
-    start: 0
-    videoOnly: false
-cta: Keystatic Cloud Sign Up
+  discriminant: false
 showBioOnHome: true
 showApp: false
 showHomeGallery: false
 showResume: false
-showPosts: true
-showMore: true
+showPosts: false
+showMore: false
 showFaqOnHome: false
 showTestOnHome: false
 pitch: How It Works
