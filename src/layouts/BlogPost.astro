@@ -15,7 +15,7 @@ const {
     slug,
 } = post;
 
-const socialImage = coverImage?.src ?? `/default-image.png`;
+const socialImage = coverImage?.src ?? `/socialCard.webp`;
 const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
 const { headings } = await post.render();
 ---
