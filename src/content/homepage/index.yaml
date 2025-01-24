@@ -1,27 +1,37 @@
 showFeature: true
-featureImage:
-  src: /images/homepage/featureImage/src.avif
+featureImage: {}
 youtube:
-  discriminant: false
+  discriminant: true
+  value:
+    url: https://youtu.be/hTZDlc5KExY
+    title: America Is Back
+    controls: false
+    useCustomPlayer: true
+    mute: true
+    loop: true
+    start: 0
+    videoOnly: false
 showBioOnHome: true
 showApp: false
 showHomeGallery: false
 showResume: false
-showPosts: false
-showMore: false
+showPosts: true
+showMore: true
 showFaqOnHome: false
-showTestOnHome: false
+showTestOnHome: true
 pitch: The Administration
-pitch2: Social Media That YOU Control
+pitch2: Our Priorities
 pitch3: High Seas Freedom
 featureOrder: 1
-bioOrder: 3
+bioOrder: 2
 appOrder: .nan
 galleryOrder: .nan
-postsOrder: 2
+postsOrder: 3
 resumeOrder: .nan
 faqOrder: .nan
-testimonialsOrder: .nan
-infoblockOrder: .nan
-infoblock2Order: .nan
+testimonialsOrder: 6
+infoblockOrder: 4
+infoblock2Order: 5
 infoblock3Order: .nan
+testimonialtitle: What the World is saying
+postsectiontitle: The Leader's Latest Posts

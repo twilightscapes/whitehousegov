@@ -1,7 +1,7 @@
 logoImage: /images/logo/logoImage.webp
 defaultView: swipe
 themeMode: light
-MAX_POSTS: 3
+MAX_POSTS: 10
 MAX_POSTS_PER_PAGE: 20
 showHeader: true
 showLogo: true
