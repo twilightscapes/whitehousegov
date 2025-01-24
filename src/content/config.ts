@@ -88,6 +88,7 @@ const collections = {
     type: 'data',
     schema: z.object({
       title: z.string().optional(),
+      showTwocol: z.boolean().optional(),
       showTitle: z.boolean().optional(),
       image: z.string().optional(),
       imageAlt: z.string().optional(),

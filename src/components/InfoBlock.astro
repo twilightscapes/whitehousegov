@@ -15,6 +15,7 @@ interface Props {
     image: string | null;
     imageAlt: string;
     description: string;
+    showTwocol: boolean;
   };
 }
 
@@ -24,7 +25,7 @@ const { pitch } = Astro.props;
 
 
 
-<section id="SecondaryInfo4" class="nameblock" style="margin: 0 auto; padding: 0 4%; align-content: center; display: grid; text-align: left; justify-content: center; vertical-align: center; font-size: clamp(1rem, 1.8vw, 3.2rem); backdrop-filter: blur(8px); border-radius: 10px;">
+<section class="contentblock" style="margin: 0 auto; padding: 0 4%; align-content: center; display: grid; text-align: left; justify-content: center; vertical-align: center; font-size: clamp(1rem, 1.8vw, 3.2rem); backdrop-filter: blur(8px); border-radius: 10px;">
 
   {pitch?.showTitle && (
     <h2 class="glow text-[clamp(1.4rem,3.9vw,4rem)] shadow-text text-center backdrop-blur-lg" style="margin:2vh auto;">
@@ -32,7 +33,7 @@ const { pitch } = Astro.props;
     </h2>
   )}
 
-  <div class="flexbutt" style="display: flex; flex: 1; gap: 2vw; width: 100%;">
+  <div class="flexbutt" style={`display: flex; flex: 1; gap: 2vw; width: 100%; flex-direction: ${pitch?.showTwocol ? 'row' : 'column'};`}>
 
     <div class="flexcheek" style="display: flex; flex-direction: column; justify-content: center; width:100%; padding-bottom: 2vh;">
       <!-- <p>{pitch?.phone ?? ''}</p> -->
