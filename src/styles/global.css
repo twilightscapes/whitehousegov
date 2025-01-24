@@ -269,7 +269,7 @@ body {
 /* #gobacker.button{margin:0 auto; max-width: 200px; height:60px; padding:1rem; } */
 
 
-
+body:has(.contactpage) #missioncontrol{display:none !important}
 
 
 #gobacker {position: absolute !important; right:60px !important; background:var(--theme-header) !important;}
