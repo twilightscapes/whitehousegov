@@ -15,7 +15,7 @@ showBioOnHome: true
 showApp: false
 showHomeGallery: false
 showResume: false
-showPosts: true
+showPosts: false
 showMore: true
 showFaqOnHome: false
 showTestOnHome: true
@@ -26,12 +26,12 @@ featureOrder: 1
 bioOrder: 2
 appOrder: .nan
 galleryOrder: .nan
-postsOrder: 3
+postsOrder: 6
 resumeOrder: .nan
 faqOrder: .nan
-testimonialsOrder: 6
-infoblockOrder: 4
-infoblock2Order: 5
+testimonialsOrder: 5
+infoblockOrder: 3
+infoblock2Order: 4
 infoblock3Order: .nan
 testimonialtitle: What the World is saying
 postsectiontitle: The Leader's Latest Posts

@@ -1,7 +1,8 @@
-showName: true
-showPhone: true
+content: '&nbsp;&nbsp;&nbsp;&nbsp;Send us your questions and concerns. '
+showName: false
+showPhone: false
 showMessage: true
-showUpload: true
+showUpload: false
 showExtraField: false
 showExtraField2: false
 showMap: true
