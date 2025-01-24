@@ -11,7 +11,7 @@ youtube:
     loop: true
     start: 0
     videoOnly: false
-cta: Sign Up
+cta: View The Leader's Blog
 showBioOnHome: true
 showApp: false
 showHomeGallery: false
