@@ -7,20 +7,16 @@ import "../styles/global.css";
 type Props = SiteMeta;
 
 const siteSettings = await getEntry('siteSettings', 'main');
-
-
 const pwaSettings = await getEntry('pwaSettings', 'index');
-
-
 const styleapps = await getEntry('styleapps', 'index');
 const { siteFont } = styleapps.data;
-
 
 const { articleDate, description, ogImage, title } = Astro.props;
 
 const titleSeparator = "•";
 const siteTitle = `${description} ${titleSeparator} ${siteConfig.title}`;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://example.com'); const socialImageURL = new URL(ogImage ? ogImage : "/socialCard.webp", Astro.url).href;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://example.com');
+const socialImageURL = ogImage ? new URL(ogImage, Astro.site).href : new URL("/socialCard.webp", Astro.site).href;
 ---
 
 <meta charset="utf-8" />
@@ -29,8 +25,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://example.
 <title>{siteTitle}</title>
 
 {/* Icons / Favicon */}
-<link href={siteSettings.data.logoImage} rel="icon" type="image/svg+xml" />
-<link href={pwaSettings.data.icon192} rel="apple-touch-icon" />
+<link href={siteConfig.logoImage} rel="icon" type="image/svg+xml" />
 <link href="/manifest.webmanifest" rel="manifest" />
 <link href={canonicalURL.toString()} rel="canonical" />
 
@@ -39,16 +34,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://example.
 <meta content={description} name="description" />
 <meta content={siteConfig.author} name="author" />
 
-
-
-
-
-	{pwaSettings.data.showRobots ? (
-		<meta name="robots" content="index, follow" />
-	) : (
-		<meta name="robots" content="noindex, nofollow" />
-	)}
-
+{pwaSettings.data.showRobots ? (
+  <meta name="robots" content="index, follow" />
+) : (
+  <meta name="robots" content="noindex, nofollow" />
+)}
 
 {/* Theme Colour */}
 <meta content={pwaSettings.data.themeColor} name="theme-color" />
@@ -64,12 +54,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://example.
 <meta content="1200" property="og:image:width" />
 <meta content="630" property="og:image:height" />
 {
-	articleDate && (
-		<>
-			<meta content={siteConfig.author} property="article:author" />
-			<meta content={articleDate} property="article:published_time" />
-		</>
-	)
+  articleDate && (
+    <>
+      <meta content={siteConfig.author} property="article:author" />
+      <meta content={articleDate} property="article:published_time" />
+    </>
+  )
 }
 
 {/* Twitter */}
@@ -88,27 +78,25 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://example.
 
 {/* Webmentions */}
 {
-	siteConfig.webmentions && (
-		<>
-			<link href={siteConfig.webmentions.link} rel="webmention" />
-			{siteConfig.webmentions.pingback && (
-				<link href={siteConfig.webmentions.pingback} rel="pingback" />
-			)}
-		</>
-	)
+  siteConfig.webmentions && (
+    <>
+      <link href={siteConfig.webmentions.link} rel="webmention" />
+      {siteConfig.webmentions.pingback && (
+        <link href={siteConfig.webmentions.pingback} rel="pingback" />
+      )}
+    </>
+  )
 }
-
-
 
 {/* Google Fonts */}
 <link rel="preconnect" href="https://fonts.googleapis.com" cross-origin="anonymous" />
 <link rel="preconnect" href="https://fonts.gstatic.com" cross-origin="anonymous" />
 
 <link
-	href={`https://fonts.googleapis.com/css2?family=${siteFont}&display=swap`}
-	rel="stylesheet"
-	cross-origin="anonymous"
-	referrer-policy="no-referrer"
+  href={`https://fonts.googleapis.com/css2?family=${siteFont}&display=swap`}
+  rel="stylesheet"
+  cross-origin="anonymous"
+  referrer-policy="no-referrer"
 />
 <style set:html={`
   #menu,.menu,.font,.full-width-image:after,.h1,.h2,.h3,.h4,.header .menu-icon:before,.slider:before,.intro:after,.intro:before,.scrolldown,h1,h2,h3,h4,input.special{font-family: ${siteFont}, sans-serif;}
