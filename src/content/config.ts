@@ -328,6 +328,7 @@ const collections = {
       viewall: z.string().optional(),
       shareText: z.string().optional(),
       copyButton: z.string().optional(),
+      siteDisclaimer: z.string().optional(),
     }),
   }),
 

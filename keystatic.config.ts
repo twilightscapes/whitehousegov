@@ -777,6 +777,7 @@ export default config({
         viewall: fields.text({ label: 'View All' }),
         shareText: fields.text({ label: 'Share This' }),
         copyButton: fields.text({ label: 'Copy' }),
+        siteDisclaimer: fields.text({ label: 'Site Disclaimer', multiline: true }),
         
         // temp: fields.text({ label: 'temp', multiline: true }),
       },
