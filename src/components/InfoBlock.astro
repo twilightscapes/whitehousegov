@@ -33,7 +33,7 @@ const { pitch } = Astro.props;
     </h2>
   )}
 
-  <div class="flexbutt" style={`display: flex; flex: 1; gap: 2vw; width: 100%; flex-direction: ${pitch?.showTwocol ? 'row' : 'column'};`}>
+  <div class="flexbutt" style={`display: flex; flex: 1; gap: 2vw; width: 100%; flex-direction: ${pitch?.showTwocol ? 'column' : ''};`}>
 
     <div class="flexcheek" style="display: flex; flex-direction: column; justify-content: center; width:100%; padding-bottom: 2vh;">
       <!-- <p>{pitch?.phone ?? ''}</p> -->
