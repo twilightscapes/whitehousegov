@@ -11,6 +11,7 @@ youtube:
     loop: true
     start: 0
     videoOnly: false
+cta: Sign Up
 showBioOnHome: true
 showApp: false
 showHomeGallery: false
@@ -21,17 +22,17 @@ showFaqOnHome: false
 showTestOnHome: true
 pitch: The Administration
 pitch2: Our Priorities
-pitch3: High Seas Freedom
+pitch3: Spacer
 featureOrder: 1
 bioOrder: 2
 appOrder: .nan
 galleryOrder: .nan
-postsOrder: 6
+postsOrder: 7
 resumeOrder: .nan
 faqOrder: .nan
-testimonialsOrder: 5
+testimonialsOrder: 6
 infoblockOrder: 3
 infoblock2Order: 4
-infoblock3Order: .nan
+infoblock3Order: 5
 testimonialtitle: What the World is saying
 postsectiontitle: The Leader's Latest Posts
