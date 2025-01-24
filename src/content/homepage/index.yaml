@@ -1,5 +1,6 @@
 showFeature: true
-featureImage: {}
+featureImage:
+  src: /images/homepage/featureImage/src.png
 youtube:
   discriminant: true
   value:

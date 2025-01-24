@@ -6,7 +6,7 @@ darkBg: rgba(13, 19, 45, 1)
 darkAccent2: rgba(0, 0, 0, 1)
 lightHeader: rgba(13, 19, 45, 0.95)
 darkHeader: rgba(13, 19, 45, 0.9)
-lightText: rgba(0, 0, 0, 1)
+lightText: rgba(0, 0, 0, 0.69)
 darkText: rgba(243, 231, 231, 1)
 customCSS: >-
   .backimage{ max-height:50vh; margin-top: 20vh; object-fit: contain
