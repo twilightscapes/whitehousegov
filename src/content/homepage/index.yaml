@@ -1,4 +1,10 @@
-showFeature: true
+sectionOrdering:
+  - feature
+  - bio
+  - infoblock1
+  - infoblock2
+  - infoblock3
+  - testimonials
 featureImage:
   src: /images/homepage/featureImage/src.png
 youtube:
@@ -12,27 +18,10 @@ youtube:
     loop: true
     start: 0
     videoOnly: false
-cta: View The Leader's Blog
-showBioOnHome: true
-showApp: false
-showHomeGallery: false
-showResume: false
-showPosts: false
 showMore: true
-showFaqOnHome: false
-showTestOnHome: true
+cta: View The Leader's Blog
 pitch: The Administration
 pitch2: Our Priorities
 pitch3: Spacer
-sectionOrdering:
-  - feature
-  - bio
-  - infoblock1
-  - infoblock2
-  - infoblock3
-  - posts
-  - testimonials
-  - resume
-  - gallery
 testimonialtitle: What the World is saying
 postsectiontitle: The Leader's Latest Posts
