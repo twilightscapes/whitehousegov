@@ -24,16 +24,15 @@ showTestOnHome: true
 pitch: The Administration
 pitch2: Our Priorities
 pitch3: Spacer
-featureOrder: 1
-bioOrder: 2
-appOrder: .nan
-galleryOrder: .nan
-postsOrder: 7
-resumeOrder: .nan
-faqOrder: .nan
-testimonialsOrder: 6
-infoblockOrder: 3
-infoblock2Order: 4
-infoblock3Order: 5
+sectionOrdering:
+  - feature
+  - bio
+  - infoblock1
+  - infoblock2
+  - infoblock3
+  - posts
+  - testimonials
+  - resume
+  - gallery
 testimonialtitle: What the World is saying
 postsectiontitle: The Leader's Latest Posts
